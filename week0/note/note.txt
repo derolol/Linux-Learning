@@ -1,2451 +1,305 @@
-derolol@ubuntu:~$ git --version
-
-Command 'git' not found, but can be installed with:
-
-sudo apt install git
-
-derolol@ubuntu:~$ sudo apt install git
-[sudo] derolol 的密码： 
-正在读取软件包列表... 完成
-正在分析软件包的依赖关系树       
-正在读取状态信息... 完成       
-将会同时安装下列软件：
-  git-man liberror-perl
-建议安装：
-  git-daemon-run | git-daemon-sysvinit git-doc git-el git-email git-gui gitk
-  gitweb git-cvs git-mediawiki git-svn
-下列【新】软件包将被安装：
-  git git-man liberror-perl
-升级了 0 个软件包，新安装了 3 个软件包，要卸载 0 个软件包，有 0 个软件包未被升级。
-有 1 个软件包没有被完全安装或卸载。
-需要下载 4,720 kB 的归档。
-解压缩后会消耗 33.8 MB 的额外空间。
-您希望继续执行吗？ [Y/n] y
-获取:1 http://mirrors.aliyun.com/ubuntu bionic/main amd64 liberror-perl all 0.17025-1 [22.8 kB]
-获取:2 http://mirrors.aliyun.com/ubuntu bionic/main amd64 git-man all 1:2.17.0-1ubuntu1 [803 kB]
-获取:3 http://mirrors.aliyun.com/ubuntu bionic/main amd64 git amd64 1:2.17.0-1ubuntu1 [3,894 kB]
-已下载 4,720 kB，耗时 2秒 (2,470 kB/s)
-正在选中未选择的软件包 liberror-perl。
-(正在读取数据库 ... 系统当前共安装有 167868 个文件和目录。)
-正准备解包 .../liberror-perl_0.17025-1_all.deb  ...
-正在解包 liberror-perl (0.17025-1) ...
-正在选中未选择的软件包 git-man。
-正准备解包 .../git-man_1%3a2.17.0-1ubuntu1_all.deb  ...
-正在解包 git-man (1:2.17.0-1ubuntu1) ...
-正在选中未选择的软件包 git。
-正准备解包 .../git_1%3a2.17.0-1ubuntu1_amd64.deb  ...
-正在解包 git (1:2.17.0-1ubuntu1) ...
-正在设置 git-man (1:2.17.0-1ubuntu1) ...
-正在设置 liberror-perl (0.17025-1) ...
-正在设置 snapd (2.38~14.04) ...
-Failed to enable unit: Unit file snapd.autoimport.service does not exist.
-dpkg: 处理软件包 snapd (--configure)时出错：
- installed snapd package post-installation script subprocess returned error exit status 1
-正在处理用于 man-db (2.8.3-2) 的触发器 ...
-正在设置 git (1:2.17.0-1ubuntu1) ...
-在处理时有错误发生：
- snapd
-E: Sub-process /usr/bin/dpkg returned an error code (1)
-derolol@ubuntu:~$ git --version
-git version 2.17.0
-derolol@ubuntu:~$ ls
-Downloads         learning         公共的  视频  文档  音乐
-examples.desktop  PycharmProjects  模板    图片  下载  桌面
-derolol@ubuntu:~$ cd learning/
-derolol@ubuntu:~/learning$ ls
-week2
-derolol@ubuntu:~/learning$ git init
-已初始化空的 Git 仓库于 /home/derolol/learning/.git/
-derolol@ubuntu:~/learning$ ls
-week2
-derolol@ubuntu:~/learning$ mkdir week0
-derolol@ubuntu:~/learning$ mkdir week1
-derolol@ubuntu:~/learning$ ls
-week0  week1  week2
-derolol@ubuntu:~/learning$ vi config.xml
-derolol@ubuntu:~/learning$ rm config.xml ./week0/config.xml
-rm: 无法删除'./week0/config.xml': 没有那个文件或目录
-derolol@ubuntu:~/learning$ rm config.xml ./week0
-rm: 无法删除'config.xml': 没有那个文件或目录
-rm: 无法删除'./week0': 是一个目录
-derolol@ubuntu:~/learning$ mv config.xml ./week0
-mv: 无法获取'config.xml' 的文件状态(stat): 没有那个文件或目录
-derolol@ubuntu:~/learning$ mv ./config.xml ./week0/config.xml
-mv: 无法获取'./config.xml' 的文件状态(stat): 没有那个文件或目录
-derolol@ubuntu:~/learning$ ls
-week0  week1  week2
-derolol@ubuntu:~/learning$ vi config.xml
-derolol@ubuntu:~/learning$ mv config.xml ./week0/
-derolol@ubuntu:~/learning$ ls
-week0  week1  week2
-derolol@ubuntu:~/learning$ ls ./week0
-config.xml
-derolol@ubuntu:~/learning$ tar -zcvf test.tar.gz week0 week1 week2
-week0/
-week0/config.xml
-week1/
-week2/
-week2/1-2
-week2/code2/
-week2/code2/650.txt
-week2/code2/541.txt
-week2/code2/951.txt
-week2/code2/357.txt
-week2/code2/504.txt
-week2/code2/127.txt
-week2/code2/433.txt
-week2/code2/590.txt
-week2/code2/572.txt
-week2/code2/156.txt
-week2/code2/97.txt
-week2/code2/704.txt
-week2/code2/284.txt
-week2/code2/396.txt
-week2/code2/791.txt
-week2/code2/236.txt
-week2/code2/810.txt
-week2/code2/279.txt
-week2/code2/909.txt
-week2/code2/849.txt
-week2/code2/371.txt
-week2/code2/222.txt
-week2/code2/367.txt
-week2/code2/447.txt
-week2/code2/619.txt
-week2/code2/1014.txt
-week2/code2/470.txt
-week2/code2/892.txt
-week2/code2/379.txt
-week2/code2/211.txt
-week2/code2/799.txt
-week2/code2/313.txt
-week2/code2/57.txt
-week2/code2/875.txt
-week2/code2/189.txt
-week2/code2/957.txt
-week2/code2/124.txt
-week2/code2/172.txt
-week2/code2/261.txt
-week2/code2/559.txt
-week2/code2/437.txt
-week2/code2/737.txt
-week2/code2/543.txt
-week2/code2/653.txt
-week2/code2/484.txt
-week2/code2/731.txt
-week2/code2/403.txt
-week2/code2/406.txt
-week2/code2/182.txt
-week2/code2/921.txt
-week2/code2/138.txt
-week2/code2/895.txt
-week2/code2/258.txt
-week2/code2/833.txt
-week2/code2/160.txt
-week2/code2/533.txt
-week2/code2/92.txt
-week2/code2/332.txt
-week2/code2/85.txt
-week2/code2/337.txt
-week2/code2/902.txt
-week2/code2/828.txt
-week2/code2/747.txt
-week2/code2/393.txt
-week2/code2/483.txt
-week2/code2/678.txt
-week2/code2/744.txt
-week2/code2/555.txt
-week2/code2/694.txt
-week2/code2/592.txt
-week2/code2/201.txt
-week2/code2/5.txt
-week2/code2/491.txt
-week2/code2/435.txt
-week2/code2/666.txt
-week2/code2/915.txt
-week2/code2/560.txt
-week2/code2/184.txt
-week2/code2/1003.txt
-week2/code2/996.txt
-week2/code2/814.txt
-week2/code2/463.txt
-week2/code2/637.txt
-week2/code2/530.txt
-week2/code2/972.txt
-week2/code2/2-3
-week2/code2/12.txt
-week2/code2/440.txt
-week2/code2/893.txt
-week2/code2/179.txt
-week2/code2/735.txt
-week2/code2/532.txt
-week2/code2/734.txt
-week2/code2/522.txt
-week2/code2/170.txt
-week2/code2/348.txt
-week2/code2/699.txt
-week2/code2/363.txt
-week2/code2/623.txt
-week2/code2/800.txt
-week2/code2/531.txt
-week2/code2/52.txt
-week2/code2/669.txt
-week2/code2/460.txt
-week2/code2/985.txt
-week2/code2/888.txt
-week2/code2/162.txt
-week2/code2/717.txt
-week2/code2/998.txt
-week2/code2/53.txt
-week2/code2/37.txt
-week2/code2/730.txt
-week2/code2/48.txt
-week2/code2/547.txt
-week2/code2/312.txt
-week2/code2/146.txt
-week2/code2/597.txt
-week2/code2/970.txt
-week2/code2/26.txt
-week2/code2/925.txt
-week2/code2/260.txt
-week2/code2/558.txt
-week2/code2/692.txt
-week2/code2/269.txt
-week2/code2/149.txt
-week2/code2/600.txt
-week2/code2/272.txt
-week2/code2/906.txt
-week2/code2/328.txt
-week2/code2/207.txt
-week2/code2/657.txt
-week2/code2/426.txt
-week2/code2/202.txt
-week2/code2/901.txt
-week2/code2/661.txt
-week2/code2/203.txt
-week2/code2/676.txt
-week2/code2/299.txt
-week2/code2/161.txt
-week2/code2/453.txt
-week2/code2/241.txt
-week2/code2/298.txt
-week2/code2/918.txt
-week2/code2/458.txt
-week2/code2/450.txt
-week2/code2/758.txt
-week2/code2/868.txt
-week2/code2/76.txt
-week2/code2/482.txt
-week2/code2/844.txt
-week2/code2/956.txt
-week2/code2/380.txt
-week2/code2/954.txt
-week2/code2/721.txt
-week2/code2/35.txt
-week2/code2/768.txt
-week2/code2/480.txt
-week2/code2/125.txt
-week2/code2/633.txt
-week2/code2/243.txt
-week2/code2/685.txt
-week2/code2/877.txt
-week2/code2/263.txt
-week2/code2/247.txt
-week2/code2/905.txt
-week2/code2/281.txt
-week2/code2/230.txt
-week2/code2/228.txt
-week2/code2/668.txt
-week2/code2/923.txt
-week2/code2/303.txt
-week2/code2/15.txt
-week2/code2/489.txt
-week2/code2/556.txt
-week2/code2/163.txt
-week2/code2/456.txt
-week2/code2/701.txt
-week2/code2/468.txt
-week2/code2/360.txt
-week2/code2/245.txt
-week2/code2/771.txt
-week2/code2/49.txt
-week2/code2/691.txt
-week2/code2/109.txt
-week2/code2/562.txt
-week2/code2/967.txt
-week2/code2/645.txt
-week2/code2/297.txt
-week2/code2/39.txt
-week2/code2/1009.txt
-week2/code2/900.txt
-week2/code2/41.txt
-week2/code2/509.txt
-week2/code2/274.txt
-week2/code2/795.txt
-week2/code2/916.txt
-week2/code2/324.txt
-week2/code2/397.txt
-week2/code2/550.txt
-week2/code2/317.txt
-week2/code2/test.data
-week2/code2/path.bak
-week2/code2/557.txt
-week2/code2/794.txt
-week2/code2/904.txt
-week2/code2/110.txt
-week2/code2/36.txt
-week2/code2/148.txt
-week2/code2/580.txt
-week2/code2/992.txt
-week2/code2/218.txt
-week2/code2/296.txt
-week2/code2/603.txt
-week2/code2/577.txt
-week2/code2/672.txt
-week2/code2/13.txt
-week2/code2/326.txt
-week2/code2/873.txt
-week2/code2/582.txt
-week2/code2/327.txt
-week2/code2/358.txt
-week2/code2/452.txt
-week2/code2/841.txt
-week2/code2/414.txt
-week2/code2/913.txt
-week2/code2/742.txt
-week2/code2/311.txt
-week2/code2/544.txt
-week2/code2/89.txt
-week2/code2/805.txt
-week2/code2/745.txt
-week2/code2/614.txt
-week2/code2/383.txt
-week2/code2/206.txt
-week2/code2/1017.txt
-week2/code2/266.txt
-week2/code2/428.txt
-week2/code2/472.txt
-week2/code2/587.txt
-week2/code2/760.txt
-week2/code2/631.txt
-week2/code2/510.txt
-week2/code2/0.txt
-week2/code2/249.txt
-week2/code2/932.txt
-week2/code2/252.txt
-week2/code2/955.txt
-week2/code2/369.txt
-week2/code2/817.txt
-week2/code2/2-3.c
-week2/code2/950.txt
-week2/code2/191.txt
-week2/code2/449.txt
-week2/code2/46.txt
-week2/code2/59.txt
-week2/code2/235.txt
-week2/code2/753.txt
-week2/code2/693.txt
-week2/code2/86.txt
-week2/code2/338.txt
-week2/code2/796.txt
-week2/code2/561.txt
-week2/code2/616.txt
-week2/code2/585.txt
-week2/code2/525.txt
-week2/code2/19.txt
-week2/code2/506.txt
-week2/code2/808.txt
-week2/code2/131.txt
-week2/code2/200.txt
-week2/code2/827.txt
-week2/code2/102.txt
-week2/code2/917.txt
-week2/code2/826.txt
-week2/code2/708.txt
-week2/code2/864.txt
-week2/code2/663.txt
-week2/code2/824.txt
-week2/code2/501.txt
-week2/code2/137.txt
-week2/code2/61.txt
-week2/code2/651.txt
-week2/code2/754.txt
-week2/code2/231.txt
-week2/code2/47.txt
-week2/code2/922.txt
-week2/code2/521.txt
-week2/code2/10.txt
-week2/code2/474.txt
-week2/code2/802.txt
-week2/code2/908.txt
-week2/code2/635.txt
-week2/code2/867.txt
-week2/code2/907.txt
-week2/code2/448.txt
-week2/code2/784.txt
-week2/code2/215.txt
-week2/code2/386.txt
-week2/code2/688.txt
-week2/code2/842.txt
-week2/code2/896.txt
-week2/code2/368.txt
-week2/code2/354.txt
-week2/code2/961.txt
-week2/code2/662.txt
-week2/code2/132.txt
-week2/code2/726.txt
-week2/code2/687.txt
-week2/code2/548.txt
-week2/code2/627.txt
-week2/code2/2.h
-week2/code2/333.txt
-week2/code2/855.txt
-week2/code2/2-2
-week2/code2/232.txt
-week2/code2/334.txt
-week2/code2/569.txt
-week2/code2/573.txt
-week2/code2/874.txt
-week2/code2/25.txt
-week2/code2/431.txt
-week2/code2/430.txt
-week2/code2/419.txt
-week2/code2/891.txt
-week2/code2/673.txt
-week2/code2/788.txt
-week2/code2/664.txt
-week2/code2/940.txt
-week2/code2/739.txt
-week2/code2/838.txt
-week2/code2/212.txt
-week2/code2/451.txt
-week2/code2/725.txt
-week2/code2/946.txt
-week2/code2/394.txt
-week2/code2/267.txt
-week2/code2/169.txt
-week2/code2/286.txt
-week2/code2/259.txt
-week2/code2/878.txt
-week2/code2/960.txt
-week2/code2/473.txt
-week2/code2/275.txt
-week2/code2/436.txt
-week2/code2/836.txt
-week2/code2/975.txt
-week2/code2/551.txt
-week2/code2/346.txt
-week2/code2/834.txt
-week2/code2/850.txt
-week2/code2/82.txt
-week2/code2/251.txt
-week2/code2/809.txt
-week2/code2/224.txt
-week2/code2/445.txt
-week2/code2/748.txt
-week2/code2/158.txt
-week2/code2/987.txt
-week2/code2/714.txt
-week2/code2/234.txt
-week2/code2/351.txt
-week2/code2/316.txt
-week2/code2/246.txt
-week2/code2/385.txt
-week2/code2/534.txt
-week2/code2/287.txt
-week2/code2/610.txt
-week2/code2/91.txt
-week2/code2/321.txt
-week2/code2/1018.txt
-week2/code2/344.txt
-week2/code2/285.txt
-week2/code2/401.txt
-week2/code2/567.txt
-week2/code2/924.txt
-week2/code2/421.txt
-week2/code2/192.txt
-week2/code2/51.txt
-week2/code2/679.txt
-week2/code2/253.txt
-week2/code2/65.txt
-week2/code2/984.txt
-week2/code2/2-4
-week2/code2/499.txt
-week2/code2/605.txt
-week2/code2/793.txt
-week2/code2/356.txt
-week2/code2/574.txt
-week2/code2/570.txt
-week2/code2/615.txt
-week2/code2/882.txt
-week2/code2/578.txt
-week2/code2/216.txt
-week2/code2/516.txt
-week2/code2/2-1
-week2/code2/756.txt
-week2/code2/1013.txt
-week2/code2/67.txt
-week2/code2/495.txt
-week2/code2/153.txt
-week2/code2/181.txt
-week2/code2/765.txt
-week2/code2/28.txt
-week2/code2/490.txt
-week2/code2/772.txt
-week2/code2/488.txt
-week2/code2/31.txt
-week2/code2/278.txt
-week2/code2/1016.txt
-week2/code2/743.txt
-week2/code2/210.txt
-week2/code2/1007.txt
-week2/code2/176.txt
-week2/code2/806.txt
-week2/code2/381.txt
-week2/code2/976.txt
-week2/code2/64.txt
-week2/code2/835.txt
-week2/code2/505.txt
-week2/code2/1005.txt
-week2/code2/860.txt
-week2/code2/751.txt
-week2/code2/646.txt
-week2/code2/625.txt
-week2/code2/523.txt
-week2/code2/60.txt
-week2/code2/196.txt
-week2/code2/309.txt
-week2/code2/977.txt
-week2/code2/233.txt
-week2/code2/579.txt
-week2/code2/352.txt
-week2/code2/711.txt
-week2/code2/459.txt
-week2/code2/331.txt
-week2/code2/518.txt
-week2/code2/513.txt
-week2/code2/738.txt
-week2/code2/30.txt
-week2/code2/425.txt
-week2/code2/696.txt
-week2/code2/83.txt
-week2/code2/1000.txt
-week2/code2/776.txt
-week2/code2/517.txt
-week2/code2/822.txt
-week2/code2/390.txt
-week2/code2/755.txt
-week2/code2/93.txt
-week2/code2/798.txt
-week2/code2/45.txt
-week2/code2/936.txt
-week2/code2/959.txt
-week2/code2/167.txt
-week2/code2/133.txt
-week2/code2/208.txt
-week2/code2/498.txt
-week2/code2/898.txt
-week2/code2/305.txt
-week2/code2/74.txt
-week2/code2/17.txt
-week2/code2/780.txt
-week2/code2/993.txt
-week2/code2/242.txt
-week2/code2/461.txt
-week2/code2/766.txt
-week2/code2/412.txt
-week2/code2/591.txt
-week2/code2/571.txt
-week2/code2/983.txt
-week2/code2/370.txt
-week2/code2/364.txt
-week2/code2/886.txt
-week2/code2/349.txt
-week2/code2/171.txt
-week2/code2/98.txt
-week2/code2/457.txt
-week2/code2/139.txt
-week2/code2/740.txt
-week2/code2/307.txt
-week2/code2/240.txt
-week2/code2/376.txt
-week2/code2/204.txt
-week2/code2/607.txt
-week2/code2/478.txt
-week2/code2/978.txt
-week2/code2/280.txt
-week2/code2/122.txt
-week2/code2/945.txt
-week2/code2/88.txt
-week2/code2/277.txt
-week2/code2/3.txt
-week2/code2/40.txt
-week2/code2/250.txt
-week2/code2/44.txt
-week2/code2/964.txt
-week2/code2/845.txt
-week2/code2/630.txt
-week2/code2/113.txt
-week2/code2/741.txt
-week2/code2/441.txt
-week2/code2/315.txt
-week2/code2/563.txt
-week2/code2/455.txt
-week2/code2/609.txt
-week2/code2/962.txt
-week2/code2/728.txt
-week2/code2/2-1.c
-week2/code2/773.txt
-week2/code2/494.txt
-week2/code2/863.txt
-week2/code2/29.txt
-week2/code2/496.txt
-week2/code2/903.txt
-week2/code2/335.txt
-week2/code2/832.txt
-week2/code2/866.txt
-week2/code2/966.txt
-week2/code2/881.txt
-week2/code2/410.txt
-week2/code2/292.txt
-week2/code2/770.txt
-week2/code2/339.txt
-week2/code2/512.txt
-week2/code2/150.txt
-week2/code2/62.txt
-week2/code2/288.txt
-week2/code2/926.txt
-week2/code2/152.txt
-week2/code2/879.txt
-week2/code2/910.txt
-week2/code2/589.txt
-week2/code2/466.txt
-week2/code2/502.txt
-week2/code2/126.txt
-week2/code2/927.txt
-week2/code2/323.txt
-week2/code2/953.txt
-week2/code2/108.txt
-week2/code2/289.txt
-week2/code2/151.txt
-week2/code2/542.txt
-week2/code2/801.txt
-week2/code2/492.txt
-week2/code2/852.txt
-week2/code2/141.txt
-week2/code2/477.txt
-week2/code2/617.txt
-week2/code2/485.txt
-week2/code2/990.txt
-week2/code2/188.txt
-week2/code2/475.txt
-week2/code2/173.txt
-week2/code2/345.txt
-week2/code2/493.txt
-week2/code2/226.txt
-week2/code2/262.txt
-week2/code2/604.txt
-week2/code2/186.txt
-week2/code2/439.txt
-week2/code2/884.txt
-week2/code2/552.txt
-week2/code2/514.txt
-week2/code2/34.txt
-week2/code2/752.txt
-week2/code2/920.txt
-week2/code2/282.txt
-week2/code2/757.txt
-week2/code2/155.txt
-week2/code2/652.txt
-week2/code2/601.txt
-week2/code2/314.txt
-week2/code2/469.txt
-week2/code2/80.txt
-week2/code2/418.txt
-week2/code2/87.txt
-week2/code2/681.txt
-week2/code2/608.txt
-week2/code2/422.txt
-week2/code2/553.txt
-week2/code2/293.txt
-week2/code2/683.txt
-week2/code2/442.txt
-week2/code2/4.txt
-week2/code2/16.txt
-week2/code2/175.txt
-week2/code2/944.txt
-week2/code2/719.txt
-week2/code2/727.txt
-week2/code2/660.txt
-week2/code2/1001.txt
-week2/code2/9.txt
-week2/code2/217.txt
-week2/code2/219.txt
-week2/code2/423.txt
-week2/code2/870.txt
-week2/code2/116.txt
-week2/code2/599.txt
-week2/code2/107.txt
-week2/code2/487.txt
-week2/code2/400.txt
-week2/code2/857.txt
-week2/code2/399.txt
-week2/code2/528.txt
-week2/code2/11.txt
-week2/code2/220.txt
-week2/code2/540.txt
-week2/code2/716.txt
-week2/code2/856.txt
-week2/code2/197.txt
-week2/code2/689.txt
-week2/code2/159.txt
-week2/code2/816.txt
-week2/code2/388.txt
-week2/code2/73.txt
-week2/code2/943.txt
-week2/code2/598.txt
-week2/code2/586.txt
-week2/code2/391.txt
-week2/code2/519.txt
-week2/code2/686.txt
-week2/code2/594.txt
-week2/code2/649.txt
-week2/code2/454.txt
-week2/code2/55.txt
-week2/code2/270.txt
-week2/code2/341.txt
-week2/code2/749.txt
-week2/code2/2.txt
-week2/code2/671.txt
-week2/code2/265.txt
-week2/code2/968.txt
-week2/code2/271.txt
-week2/code2/847.txt
-week2/code2/195.txt
-week2/code2/656.txt
-week2/code2/194.txt
-week2/code2/147.txt
-week2/code2/831.txt
-week2/code2/746.txt
-week2/code2/958.txt
-week2/code2/792.txt
-week2/code2/1002.txt
-week2/code2/980.txt
-week2/code2/520.txt
-week2/code2/629.txt
-week2/code2/221.txt
-week2/code2/205.txt
-week2/code2/638.txt
-week2/code2/300.txt
-week2/code2/96.txt
-week2/code2/1.txt
-week2/code2/68.txt
-week2/code2/438.txt
-week2/code2/695.txt
-week2/code2/78.txt
-week2/code2/697.txt
-week2/code2/524.txt
-week2/code2/690.txt
-week2/code2/815.txt
-week2/code2/140.txt
-week2/code2/129.txt
-week2/code2/705.txt
-week2/code2/465.txt
-week2/code2/58.txt
-week2/code2/774.txt
-week2/code2/319.txt
-week2/code2/818.txt
-week2/code2/359.txt
-week2/code2/994.txt
-week2/code2/342.txt
-week2/code2/395.txt
-week2/code2/986.txt
-week2/code2/100.txt
-week2/code2/537.txt
-week2/code2/424.txt
-week2/code2/723.txt
-week2/code2/949.txt
-week2/code2/384.txt
-week2/code2/632.txt
-week2/code2/804.txt
-week2/code2/914.txt
-week2/code2/238.txt
-week2/code2/995.txt
-week2/code2/63.txt
-week2/code2/273.txt
-week2/code2/982.txt
-week2/code2/20.txt
-week2/code2/178.txt
-week2/code2/546.txt
-week2/code2/471.txt
-week2/code2/276.txt
-week2/code2/392.txt
-week2/code2/667.txt
-week2/code2/862.txt
-week2/code2/787.txt
-week2/code2/639.txt
-week2/code2/613.txt
-week2/code2/823.txt
-week2/code2/33.txt
-week2/code2/416.txt
-week2/code2/2-4.c
-week2/code2/825.txt
-week2/code2/320.txt
-week2/code2/843.txt
-week2/code2/839.txt
-week2/code2/665.txt
-week2/code2/775.txt
-week2/code2/362.txt
-week2/code2/411.txt
-week2/code2/248.txt
-week2/code2/417.txt
-week2/code2/762.txt
-week2/code2/130.txt
-week2/code2/612.txt
-week2/code2/872.txt
-week2/code2/361.txt
-week2/code2/81.txt
-week2/code2/199.txt
-week2/code2/183.txt
-week2/code2/23.txt
-week2/code2/294.txt
-week2/code2/121.txt
-week2/code2/302.txt
-week2/code2/407.txt
-week2/code2/628.txt
-week2/code2/942.txt
-week2/code2/2-2.c
-week2/code2/402.txt
-week2/code2/928.txt
-week2/code2/583.txt
-week2/code2/729.txt
-week2/code2/325.txt
-week2/code2/481.txt
-week2/code2/353.txt
-week2/code2/193.txt
-week2/code2/174.txt
-week2/code2/584.txt
-week2/code2/111.txt
-week2/code2/929.txt
-week2/code2/934.txt
-week2/code2/948.txt
-week2/code2/69.txt
-week2/code2/6.txt
-week2/code2/781.txt
-week2/code2/464.txt
-week2/code2/239.txt
-week2/code2/545.txt
-week2/code2/432.txt
-week2/code2/154.txt
-week2/code2/938.txt
-week2/code2/720.txt
-week2/code2/177.txt
-week2/code2/911.txt
-week2/code2/79.txt
-week2/code2/408.txt
-week2/code2/213.txt
-week2/code2/581.txt
-week2/code2/120.txt
-week2/code2/722.txt
-week2/code2/930.txt
-week2/code2/229.txt
-week2/code2/244.txt
-week2/code2/647.txt
-week2/code2/858.txt
-week2/code2/1020.txt
-week2/code2/680.txt
-week2/code2/304.txt
-week2/code2/145.txt
-week2/code2/500.txt
-week2/code2/988.txt
-week2/code2/77.txt
-week2/code2/935.txt
-week2/code2/347.txt
-week2/code2/851.txt
-week2/code2/636.txt
-week2/code2/214.txt
-week2/code2/94.txt
-week2/code2/969.txt
-week2/code2/318.txt
-week2/code2/42.txt
-week2/code2/295.txt
-week2/code2/812.txt
-week2/code2/444.txt
-week2/code2/101.txt
-week2/code2/511.txt
-week2/code2/508.txt
-week2/code2/658.txt
-week2/code2/105.txt
-week2/code2/698.txt
-week2/code2/21.txt
-week2/code2/997.txt
-week2/code2/786.txt
-week2/code2/308.txt
-week2/code2/759.txt
-week2/code2/790.txt
-week2/code2/143.txt
-week2/code2/223.txt
-week2/code2/84.txt
-week2/code2/885.txt
-week2/code2/999.txt
-week2/code2/112.txt
-week2/code2/56.txt
-week2/code2/778.txt
-week2/code2/66.txt
-week2/code2/90.txt
-week2/code2/641.txt
-week2/code2/767.txt
-week2/code2/706.txt
-week2/code2/813.txt
-week2/code2/640.txt
-week2/code2/22.txt
-week2/code2/420.txt
-week2/code2/803.txt
-week2/code2/991.txt
-week2/code2/750.txt
-week2/code2/783.txt
-week2/code2/486.txt
-week2/code2/1004.txt
-week2/code2/70.txt
-week2/code2/618.txt
-week2/code2/846.txt
-week2/code2/180.txt
-week2/code2/136.txt
-week2/code2/413.txt
-week2/code2/611.txt
-week2/code2/507.txt
-week2/code2/291.txt
-week2/code2/829.txt
-week2/code2/568.txt
-week2/code2/398.txt
-week2/code2/576.txt
-week2/code2/655.txt
-week2/code2/526.txt
-week2/code2/535.txt
-week2/code2/1012.txt
-week2/code2/596.txt
-week2/code2/350.txt
-week2/code2/670.txt
-week2/code2/24.txt
-week2/code2/373.txt
-week2/code2/340.txt
-week2/code2/157.txt
-week2/code2/497.txt
-week2/code2/187.txt
-week2/code2/595.txt
-week2/code2/899.txt
-week2/code2/989.txt
-week2/code2/626.txt
-week2/code2/75.txt
-week2/code2/115.txt
-week2/code2/1006.txt
-week2/code2/365.txt
-week2/code2/409.txt
-week2/code2/198.txt
-week2/code2/883.txt
-week2/code2/890.txt
-week2/code2/820.txt
-week2/code2/682.txt
-week2/code2/8.txt
-week2/code2/712.txt
-week2/code2/306.txt
-week2/code2/785.txt
-week2/code2/443.txt
-week2/code2/939.txt
-week2/code2/889.txt
-week2/code2/166.txt
-week2/code2/429.txt
-week2/code2/700.txt
-week2/code2/965.txt
-week2/code2/981.txt
-week2/code2/642.txt
-week2/code2/1008.txt
-week2/code2/807.txt
-week2/code2/515.txt
-week2/code2/718.txt
-week2/code2/952.txt
-week2/code2/979.txt
-week2/code2/777.txt
-week2/code2/209.txt
-week2/code2/912.txt
-week2/code2/539.txt
-week2/code2/974.txt
-week2/code2/947.txt
-week2/code2/564.txt
-week2/code2/54.txt
-week2/code2/588.txt
-week2/code2/554.txt
-week2/code2/322.txt
-week2/code2/654.txt
-week2/code2/648.txt
-week2/code2/32.txt
-week2/code2/264.txt
-week2/code2/876.txt
-week2/code2/7.txt
-week2/code2/99.txt
-week2/code2/95.txt
-week2/code2/941.txt
-week2/code2/644.txt
-week2/code2/871.txt
-week2/code2/142.txt
-week2/code2/575.txt
-week2/code2/283.txt
-week2/code2/128.txt
-week2/code2/114.txt
-week2/code2/415.txt
-week2/code2/404.txt
-week2/code2/840.txt
-week2/code2/144.txt
-week2/code2/634.txt
-week2/code2/268.txt
-week2/code2/819.txt
-week2/code2/372.txt
-week2/code2/290.txt
-week2/code2/853.txt
-week2/code2/387.txt
-week2/code2/165.txt
-week2/code2/710.txt
-week2/code2/103.txt
-week2/code2/106.txt
-week2/code2/675.txt
-week2/code2/933.txt
-week2/code2/123.txt
-week2/code2/724.txt
-week2/code2/621.txt
-week2/code2/117.txt
-week2/code2/761.txt
-week2/code2/355.txt
-week2/code2/859.txt
-week2/code2/622.txt
-week2/code2/659.txt
-week2/code2/1019.txt
-week2/code2/566.txt
-week2/code2/462.txt
-week2/code2/225.txt
-week2/code2/476.txt
-week2/code2/446.txt
-week2/code2/919.txt
-week2/code2/733.txt
-week2/code2/527.txt
-week2/code2/707.txt
-week2/code2/257.txt
-week2/code2/479.txt
-week2/code2/164.txt
-week2/code2/382.txt
-week2/code2/620.txt
-week2/code2/255.txt
-week2/code2/897.txt
-week2/code2/713.txt
-week2/code2/71.txt
-week2/code2/529.txt
-week2/code2/764.txt
-week2/code2/14.txt
-week2/code2/937.txt
-week2/code2/43.txt
-week2/code2/27.txt
-week2/code2/1011.txt
-week2/code2/606.txt
-week2/code2/593.txt
-week2/code2/168.txt
-week2/code2/931.txt
-week2/code2/894.txt
-week2/code2/190.txt
-week2/code2/374.txt
-week2/code2/861.txt
-week2/code2/963.txt
-week2/code2/538.txt
-week2/code2/684.txt
-week2/code2/837.txt
-week2/code2/782.txt
-week2/code2/72.txt
-week2/code2/343.txt
-week2/code2/624.txt
-week2/code2/330.txt
-week2/code2/118.txt
-week2/code2/565.txt
-week2/code2/1010.txt
-week2/code2/135.txt
-week2/code2/301.txt
-week2/code2/674.txt
-week2/code2/643.txt
-week2/code2/377.txt
-week2/code2/821.txt
-week2/code2/310.txt
-week2/code2/185.txt
-week2/code2/104.txt
-week2/code2/427.txt
-week2/code2/732.txt
-week2/code2/703.txt
-week2/code2/389.txt
-week2/code2/789.txt
-week2/code2/971.txt
-week2/code2/405.txt
-week2/code2/715.txt
-week2/code2/227.txt
-week2/code2/702.txt
-week2/code2/736.txt
-week2/code2/797.txt
-week2/code2/1015.txt
-week2/code2/254.txt
-week2/code2/18.txt
-week2/code2/38.txt
-week2/code2/865.txt
-week2/code2/973.txt
-week2/code2/50.txt
-week2/code2/119.txt
-week2/code2/763.txt
-week2/code2/779.txt
-week2/code2/434.txt
-week2/code2/887.txt
-week2/code2/256.txt
-week2/code2/336.txt
-week2/code2/880.txt
-week2/code2/854.txt
-week2/code2/709.txt
-week2/code2/869.txt
-week2/code2/378.txt
-week2/code2/536.txt
-week2/code2/769.txt
-week2/code2/549.txt
-week2/code2/366.txt
-week2/code2/677.txt
-week2/code2/237.txt
-week2/code2/467.txt
-week2/code2/134.txt
-week2/code2/329.txt
-week2/code2/503.txt
-week2/code2/848.txt
-week2/code2/811.txt
-week2/code2/602.txt
-week2/code2/830.txt
-week2/code2/375.txt
-week2/1-2.sh
-week2/1-2.c
-derolol@ubuntu:~/learning$ git branch
-derolol@ubuntu:~/learning$ git commit -m "first commit"
-
-*** 请告诉我你是谁。
-
-运行
-
-  git config --global user.email "you@example.com"
-  git config --global user.name "Your Name"
-
-来设置您账号的缺省身份标识。
-如果仅在本仓库设置身份标识，则省略 --global 参数。
-
-fatal: 无法自动探测邮件地址（得到 'derolol@ubuntu.(none)'）
-derolol@ubuntu:~/learning$ git remote add origin git@github.com:derolol/Linux-Learning.git
-derolol@ubuntu:~/learning$ git commit -m "first commit"
-
-*** 请告诉我你是谁。
-
-运行
-
-  git config --global user.email "you@example.com"
-  git config --global user.name "Your Name"
-
-来设置您账号的缺省身份标识。
-如果仅在本仓库设置身份标识，则省略 --global 参数。
-
-fatal: 无法自动探测邮件地址（得到 'derolol@ubuntu.(none)'）
-derolol@ubuntu:~/learning$ git config --global user.email "837456540@qq.com"
-derolol@ubuntu:~/learning$ git config --global user.name "derolol"
-derolol@ubuntu:~/learning$ git commit -m "first commit"
-位于分支 master
-
-初始提交
-
-未跟踪的文件:
-	test.tar.gz
-	week0/
-	week2/
-
-提交为空，但是存在尚未跟踪的文件
-derolol@ubuntu:~/learning$ git add .
-derolol@ubuntu:~/learning$ git commit -m "first commit"
-[master （根提交） 1014e96] first commit
- 1037 files changed, 68 insertions(+)
- create mode 100644 test.tar.gz
- create mode 100644 week0/config.xml
- create mode 100755 week2/1-2
- create mode 100644 week2/1-2.c
- create mode 100755 week2/1-2.sh
- create mode 100644 week2/code2/0.txt
- create mode 100644 week2/code2/1.txt
- create mode 100644 week2/code2/10.txt
- create mode 100644 week2/code2/100.txt
- create mode 100644 week2/code2/1000.txt
- create mode 100644 week2/code2/1001.txt
- create mode 100644 week2/code2/1002.txt
- create mode 100644 week2/code2/1003.txt
- create mode 100644 week2/code2/1004.txt
- create mode 100644 week2/code2/1005.txt
- create mode 100644 week2/code2/1006.txt
- create mode 100644 week2/code2/1007.txt
- create mode 100644 week2/code2/1008.txt
- create mode 100644 week2/code2/1009.txt
- create mode 100644 week2/code2/101.txt
- create mode 100644 week2/code2/1010.txt
- create mode 100644 week2/code2/1011.txt
- create mode 100644 week2/code2/1012.txt
- create mode 100644 week2/code2/1013.txt
- create mode 100644 week2/code2/1014.txt
- create mode 100644 week2/code2/1015.txt
- create mode 100644 week2/code2/1016.txt
- create mode 100644 week2/code2/1017.txt
- create mode 100644 week2/code2/1018.txt
- create mode 100644 week2/code2/1019.txt
- create mode 100644 week2/code2/102.txt
- create mode 100644 week2/code2/1020.txt
- create mode 100644 week2/code2/103.txt
- create mode 100644 week2/code2/104.txt
- create mode 100644 week2/code2/105.txt
- create mode 100644 week2/code2/106.txt
- create mode 100644 week2/code2/107.txt
- create mode 100644 week2/code2/108.txt
- create mode 100644 week2/code2/109.txt
- create mode 100644 week2/code2/11.txt
- create mode 100644 week2/code2/110.txt
- create mode 100644 week2/code2/111.txt
- create mode 100644 week2/code2/112.txt
- create mode 100644 week2/code2/113.txt
- create mode 100644 week2/code2/114.txt
- create mode 100644 week2/code2/115.txt
- create mode 100644 week2/code2/116.txt
- create mode 100644 week2/code2/117.txt
- create mode 100644 week2/code2/118.txt
- create mode 100644 week2/code2/119.txt
- create mode 100644 week2/code2/12.txt
- create mode 100644 week2/code2/120.txt
- create mode 100644 week2/code2/121.txt
- create mode 100644 week2/code2/122.txt
- create mode 100644 week2/code2/123.txt
- create mode 100644 week2/code2/124.txt
- create mode 100644 week2/code2/125.txt
- create mode 100644 week2/code2/126.txt
- create mode 100644 week2/code2/127.txt
- create mode 100644 week2/code2/128.txt
- create mode 100644 week2/code2/129.txt
- create mode 100644 week2/code2/13.txt
- create mode 100644 week2/code2/130.txt
- create mode 100644 week2/code2/131.txt
- create mode 100644 week2/code2/132.txt
- create mode 100644 week2/code2/133.txt
- create mode 100644 week2/code2/134.txt
- create mode 100644 week2/code2/135.txt
- create mode 100644 week2/code2/136.txt
- create mode 100644 week2/code2/137.txt
- create mode 100644 week2/code2/138.txt
- create mode 100644 week2/code2/139.txt
- create mode 100644 week2/code2/14.txt
- create mode 100644 week2/code2/140.txt
- create mode 100644 week2/code2/141.txt
- create mode 100644 week2/code2/142.txt
- create mode 100644 week2/code2/143.txt
- create mode 100644 week2/code2/144.txt
- create mode 100644 week2/code2/145.txt
- create mode 100644 week2/code2/146.txt
- create mode 100644 week2/code2/147.txt
- create mode 100644 week2/code2/148.txt
- create mode 100644 week2/code2/149.txt
- create mode 100644 week2/code2/15.txt
- create mode 100644 week2/code2/150.txt
- create mode 100644 week2/code2/151.txt
- create mode 100644 week2/code2/152.txt
- create mode 100644 week2/code2/153.txt
- create mode 100644 week2/code2/154.txt
- create mode 100644 week2/code2/155.txt
- create mode 100644 week2/code2/156.txt
- create mode 100644 week2/code2/157.txt
- create mode 100644 week2/code2/158.txt
- create mode 100644 week2/code2/159.txt
- create mode 100644 week2/code2/16.txt
- create mode 100644 week2/code2/160.txt
- create mode 100644 week2/code2/161.txt
- create mode 100644 week2/code2/162.txt
- create mode 100644 week2/code2/163.txt
- create mode 100644 week2/code2/164.txt
- create mode 100644 week2/code2/165.txt
- create mode 100644 week2/code2/166.txt
- create mode 100644 week2/code2/167.txt
- create mode 100644 week2/code2/168.txt
- create mode 100644 week2/code2/169.txt
- create mode 100644 week2/code2/17.txt
- create mode 100644 week2/code2/170.txt
- create mode 100644 week2/code2/171.txt
- create mode 100644 week2/code2/172.txt
- create mode 100644 week2/code2/173.txt
- create mode 100644 week2/code2/174.txt
- create mode 100644 week2/code2/175.txt
- create mode 100644 week2/code2/176.txt
- create mode 100644 week2/code2/177.txt
- create mode 100644 week2/code2/178.txt
- create mode 100644 week2/code2/179.txt
- create mode 100644 week2/code2/18.txt
- create mode 100644 week2/code2/180.txt
- create mode 100644 week2/code2/181.txt
- create mode 100644 week2/code2/182.txt
- create mode 100644 week2/code2/183.txt
- create mode 100644 week2/code2/184.txt
- create mode 100644 week2/code2/185.txt
- create mode 100644 week2/code2/186.txt
- create mode 100644 week2/code2/187.txt
- create mode 100644 week2/code2/188.txt
- create mode 100644 week2/code2/189.txt
- create mode 100644 week2/code2/19.txt
- create mode 100644 week2/code2/190.txt
- create mode 100644 week2/code2/191.txt
- create mode 100644 week2/code2/192.txt
- create mode 100644 week2/code2/193.txt
- create mode 100644 week2/code2/194.txt
- create mode 100644 week2/code2/195.txt
- create mode 100644 week2/code2/196.txt
- create mode 100644 week2/code2/197.txt
- create mode 100644 week2/code2/198.txt
- create mode 100644 week2/code2/199.txt
- create mode 100755 week2/code2/2-1
- create mode 100755 week2/code2/2-1.c
- create mode 100755 week2/code2/2-2
- create mode 100755 week2/code2/2-2.c
- create mode 100755 week2/code2/2-3
- create mode 100755 week2/code2/2-3.c
- create mode 100755 week2/code2/2-4
- create mode 100644 week2/code2/2-4.c
- create mode 100644 week2/code2/2.h
- create mode 100644 week2/code2/2.txt
- create mode 100644 week2/code2/20.txt
- create mode 100644 week2/code2/200.txt
- create mode 100644 week2/code2/201.txt
- create mode 100644 week2/code2/202.txt
- create mode 100644 week2/code2/203.txt
- create mode 100644 week2/code2/204.txt
- create mode 100644 week2/code2/205.txt
- create mode 100644 week2/code2/206.txt
- create mode 100644 week2/code2/207.txt
- create mode 100644 week2/code2/208.txt
- create mode 100644 week2/code2/209.txt
- create mode 100644 week2/code2/21.txt
- create mode 100644 week2/code2/210.txt
- create mode 100644 week2/code2/211.txt
- create mode 100644 week2/code2/212.txt
- create mode 100644 week2/code2/213.txt
- create mode 100644 week2/code2/214.txt
- create mode 100644 week2/code2/215.txt
- create mode 100644 week2/code2/216.txt
- create mode 100644 week2/code2/217.txt
- create mode 100644 week2/code2/218.txt
- create mode 100644 week2/code2/219.txt
- create mode 100644 week2/code2/22.txt
- create mode 100644 week2/code2/220.txt
- create mode 100644 week2/code2/221.txt
- create mode 100644 week2/code2/222.txt
- create mode 100644 week2/code2/223.txt
- create mode 100644 week2/code2/224.txt
- create mode 100644 week2/code2/225.txt
- create mode 100644 week2/code2/226.txt
- create mode 100644 week2/code2/227.txt
- create mode 100644 week2/code2/228.txt
- create mode 100644 week2/code2/229.txt
- create mode 100644 week2/code2/23.txt
- create mode 100644 week2/code2/230.txt
- create mode 100644 week2/code2/231.txt
- create mode 100644 week2/code2/232.txt
- create mode 100644 week2/code2/233.txt
- create mode 100644 week2/code2/234.txt
- create mode 100644 week2/code2/235.txt
- create mode 100644 week2/code2/236.txt
- create mode 100644 week2/code2/237.txt
- create mode 100644 week2/code2/238.txt
- create mode 100644 week2/code2/239.txt
- create mode 100644 week2/code2/24.txt
- create mode 100644 week2/code2/240.txt
- create mode 100644 week2/code2/241.txt
- create mode 100644 week2/code2/242.txt
- create mode 100644 week2/code2/243.txt
- create mode 100644 week2/code2/244.txt
- create mode 100644 week2/code2/245.txt
- create mode 100644 week2/code2/246.txt
- create mode 100644 week2/code2/247.txt
- create mode 100644 week2/code2/248.txt
- create mode 100644 week2/code2/249.txt
- create mode 100644 week2/code2/25.txt
- create mode 100644 week2/code2/250.txt
- create mode 100644 week2/code2/251.txt
- create mode 100644 week2/code2/252.txt
- create mode 100644 week2/code2/253.txt
- create mode 100644 week2/code2/254.txt
- create mode 100644 week2/code2/255.txt
- create mode 100644 week2/code2/256.txt
- create mode 100644 week2/code2/257.txt
- create mode 100644 week2/code2/258.txt
- create mode 100644 week2/code2/259.txt
- create mode 100644 week2/code2/26.txt
- create mode 100644 week2/code2/260.txt
- create mode 100644 week2/code2/261.txt
- create mode 100644 week2/code2/262.txt
- create mode 100644 week2/code2/263.txt
- create mode 100644 week2/code2/264.txt
- create mode 100644 week2/code2/265.txt
- create mode 100644 week2/code2/266.txt
- create mode 100644 week2/code2/267.txt
- create mode 100644 week2/code2/268.txt
- create mode 100644 week2/code2/269.txt
- create mode 100644 week2/code2/27.txt
- create mode 100644 week2/code2/270.txt
- create mode 100644 week2/code2/271.txt
- create mode 100644 week2/code2/272.txt
- create mode 100644 week2/code2/273.txt
- create mode 100644 week2/code2/274.txt
- create mode 100644 week2/code2/275.txt
- create mode 100644 week2/code2/276.txt
- create mode 100644 week2/code2/277.txt
- create mode 100644 week2/code2/278.txt
- create mode 100644 week2/code2/279.txt
- create mode 100644 week2/code2/28.txt
- create mode 100644 week2/code2/280.txt
- create mode 100644 week2/code2/281.txt
- create mode 100644 week2/code2/282.txt
- create mode 100644 week2/code2/283.txt
- create mode 100644 week2/code2/284.txt
- create mode 100644 week2/code2/285.txt
- create mode 100644 week2/code2/286.txt
- create mode 100644 week2/code2/287.txt
- create mode 100644 week2/code2/288.txt
- create mode 100644 week2/code2/289.txt
- create mode 100644 week2/code2/29.txt
- create mode 100644 week2/code2/290.txt
- create mode 100644 week2/code2/291.txt
- create mode 100644 week2/code2/292.txt
- create mode 100644 week2/code2/293.txt
- create mode 100644 week2/code2/294.txt
- create mode 100644 week2/code2/295.txt
- create mode 100644 week2/code2/296.txt
- create mode 100644 week2/code2/297.txt
- create mode 100644 week2/code2/298.txt
- create mode 100644 week2/code2/299.txt
- create mode 100644 week2/code2/3.txt
- create mode 100644 week2/code2/30.txt
- create mode 100644 week2/code2/300.txt
- create mode 100644 week2/code2/301.txt
- create mode 100644 week2/code2/302.txt
- create mode 100644 week2/code2/303.txt
- create mode 100644 week2/code2/304.txt
- create mode 100644 week2/code2/305.txt
- create mode 100644 week2/code2/306.txt
- create mode 100644 week2/code2/307.txt
- create mode 100644 week2/code2/308.txt
- create mode 100644 week2/code2/309.txt
- create mode 100644 week2/code2/31.txt
- create mode 100644 week2/code2/310.txt
- create mode 100644 week2/code2/311.txt
- create mode 100644 week2/code2/312.txt
- create mode 100644 week2/code2/313.txt
- create mode 100644 week2/code2/314.txt
- create mode 100644 week2/code2/315.txt
- create mode 100644 week2/code2/316.txt
- create mode 100644 week2/code2/317.txt
- create mode 100644 week2/code2/318.txt
- create mode 100644 week2/code2/319.txt
- create mode 100644 week2/code2/32.txt
- create mode 100644 week2/code2/320.txt
- create mode 100644 week2/code2/321.txt
- create mode 100644 week2/code2/322.txt
- create mode 100644 week2/code2/323.txt
- create mode 100644 week2/code2/324.txt
- create mode 100644 week2/code2/325.txt
- create mode 100644 week2/code2/326.txt
- create mode 100644 week2/code2/327.txt
- create mode 100644 week2/code2/328.txt
- create mode 100644 week2/code2/329.txt
- create mode 100644 week2/code2/33.txt
- create mode 100644 week2/code2/330.txt
- create mode 100644 week2/code2/331.txt
- create mode 100644 week2/code2/332.txt
- create mode 100644 week2/code2/333.txt
- create mode 100644 week2/code2/334.txt
- create mode 100644 week2/code2/335.txt
- create mode 100644 week2/code2/336.txt
- create mode 100644 week2/code2/337.txt
- create mode 100644 week2/code2/338.txt
- create mode 100644 week2/code2/339.txt
- create mode 100644 week2/code2/34.txt
- create mode 100644 week2/code2/340.txt
- create mode 100644 week2/code2/341.txt
- create mode 100644 week2/code2/342.txt
- create mode 100644 week2/code2/343.txt
- create mode 100644 week2/code2/344.txt
- create mode 100644 week2/code2/345.txt
- create mode 100644 week2/code2/346.txt
- create mode 100644 week2/code2/347.txt
- create mode 100644 week2/code2/348.txt
- create mode 100644 week2/code2/349.txt
- create mode 100644 week2/code2/35.txt
- create mode 100644 week2/code2/350.txt
- create mode 100644 week2/code2/351.txt
- create mode 100644 week2/code2/352.txt
- create mode 100644 week2/code2/353.txt
- create mode 100644 week2/code2/354.txt
- create mode 100644 week2/code2/355.txt
- create mode 100644 week2/code2/356.txt
- create mode 100644 week2/code2/357.txt
- create mode 100644 week2/code2/358.txt
- create mode 100644 week2/code2/359.txt
- create mode 100644 week2/code2/36.txt
- create mode 100644 week2/code2/360.txt
- create mode 100644 week2/code2/361.txt
- create mode 100644 week2/code2/362.txt
- create mode 100644 week2/code2/363.txt
- create mode 100644 week2/code2/364.txt
- create mode 100644 week2/code2/365.txt
- create mode 100644 week2/code2/366.txt
- create mode 100644 week2/code2/367.txt
- create mode 100644 week2/code2/368.txt
- create mode 100644 week2/code2/369.txt
- create mode 100644 week2/code2/37.txt
- create mode 100644 week2/code2/370.txt
- create mode 100644 week2/code2/371.txt
- create mode 100644 week2/code2/372.txt
- create mode 100644 week2/code2/373.txt
- create mode 100644 week2/code2/374.txt
- create mode 100644 week2/code2/375.txt
- create mode 100644 week2/code2/376.txt
- create mode 100644 week2/code2/377.txt
- create mode 100644 week2/code2/378.txt
- create mode 100644 week2/code2/379.txt
- create mode 100644 week2/code2/38.txt
- create mode 100644 week2/code2/380.txt
- create mode 100644 week2/code2/381.txt
- create mode 100644 week2/code2/382.txt
- create mode 100644 week2/code2/383.txt
- create mode 100644 week2/code2/384.txt
- create mode 100644 week2/code2/385.txt
- create mode 100644 week2/code2/386.txt
- create mode 100644 week2/code2/387.txt
- create mode 100644 week2/code2/388.txt
- create mode 100644 week2/code2/389.txt
- create mode 100644 week2/code2/39.txt
- create mode 100644 week2/code2/390.txt
- create mode 100644 week2/code2/391.txt
- create mode 100644 week2/code2/392.txt
- create mode 100644 week2/code2/393.txt
- create mode 100644 week2/code2/394.txt
- create mode 100644 week2/code2/395.txt
- create mode 100644 week2/code2/396.txt
- create mode 100644 week2/code2/397.txt
- create mode 100644 week2/code2/398.txt
- create mode 100644 week2/code2/399.txt
- create mode 100644 week2/code2/4.txt
- create mode 100644 week2/code2/40.txt
- create mode 100644 week2/code2/400.txt
- create mode 100644 week2/code2/401.txt
- create mode 100644 week2/code2/402.txt
- create mode 100644 week2/code2/403.txt
- create mode 100644 week2/code2/404.txt
- create mode 100644 week2/code2/405.txt
- create mode 100644 week2/code2/406.txt
- create mode 100644 week2/code2/407.txt
- create mode 100644 week2/code2/408.txt
- create mode 100644 week2/code2/409.txt
- create mode 100644 week2/code2/41.txt
- create mode 100644 week2/code2/410.txt
- create mode 100644 week2/code2/411.txt
- create mode 100644 week2/code2/412.txt
- create mode 100644 week2/code2/413.txt
- create mode 100644 week2/code2/414.txt
- create mode 100644 week2/code2/415.txt
- create mode 100644 week2/code2/416.txt
- create mode 100644 week2/code2/417.txt
- create mode 100644 week2/code2/418.txt
- create mode 100644 week2/code2/419.txt
- create mode 100644 week2/code2/42.txt
- create mode 100644 week2/code2/420.txt
- create mode 100644 week2/code2/421.txt
- create mode 100644 week2/code2/422.txt
- create mode 100644 week2/code2/423.txt
- create mode 100644 week2/code2/424.txt
- create mode 100644 week2/code2/425.txt
- create mode 100644 week2/code2/426.txt
- create mode 100644 week2/code2/427.txt
- create mode 100644 week2/code2/428.txt
- create mode 100644 week2/code2/429.txt
- create mode 100644 week2/code2/43.txt
- create mode 100644 week2/code2/430.txt
- create mode 100644 week2/code2/431.txt
- create mode 100644 week2/code2/432.txt
- create mode 100644 week2/code2/433.txt
- create mode 100644 week2/code2/434.txt
- create mode 100644 week2/code2/435.txt
- create mode 100644 week2/code2/436.txt
- create mode 100644 week2/code2/437.txt
- create mode 100644 week2/code2/438.txt
- create mode 100644 week2/code2/439.txt
- create mode 100644 week2/code2/44.txt
- create mode 100644 week2/code2/440.txt
- create mode 100644 week2/code2/441.txt
- create mode 100644 week2/code2/442.txt
- create mode 100644 week2/code2/443.txt
- create mode 100644 week2/code2/444.txt
- create mode 100644 week2/code2/445.txt
- create mode 100644 week2/code2/446.txt
- create mode 100644 week2/code2/447.txt
- create mode 100644 week2/code2/448.txt
- create mode 100644 week2/code2/449.txt
- create mode 100644 week2/code2/45.txt
- create mode 100644 week2/code2/450.txt
- create mode 100644 week2/code2/451.txt
- create mode 100644 week2/code2/452.txt
- create mode 100644 week2/code2/453.txt
- create mode 100644 week2/code2/454.txt
- create mode 100644 week2/code2/455.txt
- create mode 100644 week2/code2/456.txt
- create mode 100644 week2/code2/457.txt
- create mode 100644 week2/code2/458.txt
- create mode 100644 week2/code2/459.txt
- create mode 100644 week2/code2/46.txt
- create mode 100644 week2/code2/460.txt
- create mode 100644 week2/code2/461.txt
- create mode 100644 week2/code2/462.txt
- create mode 100644 week2/code2/463.txt
- create mode 100644 week2/code2/464.txt
- create mode 100644 week2/code2/465.txt
- create mode 100644 week2/code2/466.txt
- create mode 100644 week2/code2/467.txt
- create mode 100644 week2/code2/468.txt
- create mode 100644 week2/code2/469.txt
- create mode 100644 week2/code2/47.txt
- create mode 100644 week2/code2/470.txt
- create mode 100644 week2/code2/471.txt
- create mode 100644 week2/code2/472.txt
- create mode 100644 week2/code2/473.txt
- create mode 100644 week2/code2/474.txt
- create mode 100644 week2/code2/475.txt
- create mode 100644 week2/code2/476.txt
- create mode 100644 week2/code2/477.txt
- create mode 100644 week2/code2/478.txt
- create mode 100644 week2/code2/479.txt
- create mode 100644 week2/code2/48.txt
- create mode 100644 week2/code2/480.txt
- create mode 100644 week2/code2/481.txt
- create mode 100644 week2/code2/482.txt
- create mode 100644 week2/code2/483.txt
- create mode 100644 week2/code2/484.txt
- create mode 100644 week2/code2/485.txt
- create mode 100644 week2/code2/486.txt
- create mode 100644 week2/code2/487.txt
- create mode 100644 week2/code2/488.txt
- create mode 100644 week2/code2/489.txt
- create mode 100644 week2/code2/49.txt
- create mode 100644 week2/code2/490.txt
- create mode 100644 week2/code2/491.txt
- create mode 100644 week2/code2/492.txt
- create mode 100644 week2/code2/493.txt
- create mode 100644 week2/code2/494.txt
- create mode 100644 week2/code2/495.txt
- create mode 100644 week2/code2/496.txt
- create mode 100644 week2/code2/497.txt
- create mode 100644 week2/code2/498.txt
- create mode 100644 week2/code2/499.txt
- create mode 100644 week2/code2/5.txt
- create mode 100644 week2/code2/50.txt
- create mode 100644 week2/code2/500.txt
- create mode 100644 week2/code2/501.txt
- create mode 100644 week2/code2/502.txt
- create mode 100644 week2/code2/503.txt
- create mode 100644 week2/code2/504.txt
- create mode 100644 week2/code2/505.txt
- create mode 100644 week2/code2/506.txt
- create mode 100644 week2/code2/507.txt
- create mode 100644 week2/code2/508.txt
- create mode 100644 week2/code2/509.txt
- create mode 100644 week2/code2/51.txt
- create mode 100644 week2/code2/510.txt
- create mode 100644 week2/code2/511.txt
- create mode 100644 week2/code2/512.txt
- create mode 100644 week2/code2/513.txt
- create mode 100644 week2/code2/514.txt
- create mode 100644 week2/code2/515.txt
- create mode 100644 week2/code2/516.txt
- create mode 100644 week2/code2/517.txt
- create mode 100644 week2/code2/518.txt
- create mode 100644 week2/code2/519.txt
- create mode 100644 week2/code2/52.txt
- create mode 100644 week2/code2/520.txt
- create mode 100644 week2/code2/521.txt
- create mode 100644 week2/code2/522.txt
- create mode 100644 week2/code2/523.txt
- create mode 100644 week2/code2/524.txt
- create mode 100644 week2/code2/525.txt
- create mode 100644 week2/code2/526.txt
- create mode 100644 week2/code2/527.txt
- create mode 100644 week2/code2/528.txt
- create mode 100644 week2/code2/529.txt
- create mode 100644 week2/code2/53.txt
- create mode 100644 week2/code2/530.txt
- create mode 100644 week2/code2/531.txt
- create mode 100644 week2/code2/532.txt
- create mode 100644 week2/code2/533.txt
- create mode 100644 week2/code2/534.txt
- create mode 100644 week2/code2/535.txt
- create mode 100644 week2/code2/536.txt
- create mode 100644 week2/code2/537.txt
- create mode 100644 week2/code2/538.txt
- create mode 100644 week2/code2/539.txt
- create mode 100644 week2/code2/54.txt
- create mode 100644 week2/code2/540.txt
- create mode 100644 week2/code2/541.txt
- create mode 100644 week2/code2/542.txt
- create mode 100644 week2/code2/543.txt
- create mode 100644 week2/code2/544.txt
- create mode 100644 week2/code2/545.txt
- create mode 100644 week2/code2/546.txt
- create mode 100644 week2/code2/547.txt
- create mode 100644 week2/code2/548.txt
- create mode 100644 week2/code2/549.txt
- create mode 100644 week2/code2/55.txt
- create mode 100644 week2/code2/550.txt
- create mode 100644 week2/code2/551.txt
- create mode 100644 week2/code2/552.txt
- create mode 100644 week2/code2/553.txt
- create mode 100644 week2/code2/554.txt
- create mode 100644 week2/code2/555.txt
- create mode 100644 week2/code2/556.txt
- create mode 100644 week2/code2/557.txt
- create mode 100644 week2/code2/558.txt
- create mode 100644 week2/code2/559.txt
- create mode 100644 week2/code2/56.txt
- create mode 100644 week2/code2/560.txt
- create mode 100644 week2/code2/561.txt
- create mode 100644 week2/code2/562.txt
- create mode 100644 week2/code2/563.txt
- create mode 100644 week2/code2/564.txt
- create mode 100644 week2/code2/565.txt
- create mode 100644 week2/code2/566.txt
- create mode 100644 week2/code2/567.txt
- create mode 100644 week2/code2/568.txt
- create mode 100644 week2/code2/569.txt
- create mode 100644 week2/code2/57.txt
- create mode 100644 week2/code2/570.txt
- create mode 100644 week2/code2/571.txt
- create mode 100644 week2/code2/572.txt
- create mode 100644 week2/code2/573.txt
- create mode 100644 week2/code2/574.txt
- create mode 100644 week2/code2/575.txt
- create mode 100644 week2/code2/576.txt
- create mode 100644 week2/code2/577.txt
- create mode 100644 week2/code2/578.txt
- create mode 100644 week2/code2/579.txt
- create mode 100644 week2/code2/58.txt
- create mode 100644 week2/code2/580.txt
- create mode 100644 week2/code2/581.txt
- create mode 100644 week2/code2/582.txt
- create mode 100644 week2/code2/583.txt
- create mode 100644 week2/code2/584.txt
- create mode 100644 week2/code2/585.txt
- create mode 100644 week2/code2/586.txt
- create mode 100644 week2/code2/587.txt
- create mode 100644 week2/code2/588.txt
- create mode 100644 week2/code2/589.txt
- create mode 100644 week2/code2/59.txt
- create mode 100644 week2/code2/590.txt
- create mode 100644 week2/code2/591.txt
- create mode 100644 week2/code2/592.txt
- create mode 100644 week2/code2/593.txt
- create mode 100644 week2/code2/594.txt
- create mode 100644 week2/code2/595.txt
- create mode 100644 week2/code2/596.txt
- create mode 100644 week2/code2/597.txt
- create mode 100644 week2/code2/598.txt
- create mode 100644 week2/code2/599.txt
- create mode 100644 week2/code2/6.txt
- create mode 100644 week2/code2/60.txt
- create mode 100644 week2/code2/600.txt
- create mode 100644 week2/code2/601.txt
- create mode 100644 week2/code2/602.txt
- create mode 100644 week2/code2/603.txt
- create mode 100644 week2/code2/604.txt
- create mode 100644 week2/code2/605.txt
- create mode 100644 week2/code2/606.txt
- create mode 100644 week2/code2/607.txt
- create mode 100644 week2/code2/608.txt
- create mode 100644 week2/code2/609.txt
- create mode 100644 week2/code2/61.txt
- create mode 100644 week2/code2/610.txt
- create mode 100644 week2/code2/611.txt
- create mode 100644 week2/code2/612.txt
- create mode 100644 week2/code2/613.txt
- create mode 100644 week2/code2/614.txt
- create mode 100644 week2/code2/615.txt
- create mode 100644 week2/code2/616.txt
- create mode 100644 week2/code2/617.txt
- create mode 100644 week2/code2/618.txt
- create mode 100644 week2/code2/619.txt
- create mode 100644 week2/code2/62.txt
- create mode 100644 week2/code2/620.txt
- create mode 100644 week2/code2/621.txt
- create mode 100644 week2/code2/622.txt
- create mode 100644 week2/code2/623.txt
- create mode 100644 week2/code2/624.txt
- create mode 100644 week2/code2/625.txt
- create mode 100644 week2/code2/626.txt
- create mode 100644 week2/code2/627.txt
- create mode 100644 week2/code2/628.txt
- create mode 100644 week2/code2/629.txt
- create mode 100644 week2/code2/63.txt
- create mode 100644 week2/code2/630.txt
- create mode 100644 week2/code2/631.txt
- create mode 100644 week2/code2/632.txt
- create mode 100644 week2/code2/633.txt
- create mode 100644 week2/code2/634.txt
- create mode 100644 week2/code2/635.txt
- create mode 100644 week2/code2/636.txt
- create mode 100644 week2/code2/637.txt
- create mode 100644 week2/code2/638.txt
- create mode 100644 week2/code2/639.txt
- create mode 100644 week2/code2/64.txt
- create mode 100644 week2/code2/640.txt
- create mode 100644 week2/code2/641.txt
- create mode 100644 week2/code2/642.txt
- create mode 100644 week2/code2/643.txt
- create mode 100644 week2/code2/644.txt
- create mode 100644 week2/code2/645.txt
- create mode 100644 week2/code2/646.txt
- create mode 100644 week2/code2/647.txt
- create mode 100644 week2/code2/648.txt
- create mode 100644 week2/code2/649.txt
- create mode 100644 week2/code2/65.txt
- create mode 100644 week2/code2/650.txt
- create mode 100644 week2/code2/651.txt
- create mode 100644 week2/code2/652.txt
- create mode 100644 week2/code2/653.txt
- create mode 100644 week2/code2/654.txt
- create mode 100644 week2/code2/655.txt
- create mode 100644 week2/code2/656.txt
- create mode 100644 week2/code2/657.txt
- create mode 100644 week2/code2/658.txt
- create mode 100644 week2/code2/659.txt
- create mode 100644 week2/code2/66.txt
- create mode 100644 week2/code2/660.txt
- create mode 100644 week2/code2/661.txt
- create mode 100644 week2/code2/662.txt
- create mode 100644 week2/code2/663.txt
- create mode 100644 week2/code2/664.txt
- create mode 100644 week2/code2/665.txt
- create mode 100644 week2/code2/666.txt
- create mode 100644 week2/code2/667.txt
- create mode 100644 week2/code2/668.txt
- create mode 100644 week2/code2/669.txt
- create mode 100644 week2/code2/67.txt
- create mode 100644 week2/code2/670.txt
- create mode 100644 week2/code2/671.txt
- create mode 100644 week2/code2/672.txt
- create mode 100644 week2/code2/673.txt
- create mode 100644 week2/code2/674.txt
- create mode 100644 week2/code2/675.txt
- create mode 100644 week2/code2/676.txt
- create mode 100644 week2/code2/677.txt
- create mode 100644 week2/code2/678.txt
- create mode 100644 week2/code2/679.txt
- create mode 100644 week2/code2/68.txt
- create mode 100644 week2/code2/680.txt
- create mode 100644 week2/code2/681.txt
- create mode 100644 week2/code2/682.txt
- create mode 100644 week2/code2/683.txt
- create mode 100644 week2/code2/684.txt
- create mode 100644 week2/code2/685.txt
- create mode 100644 week2/code2/686.txt
- create mode 100644 week2/code2/687.txt
- create mode 100644 week2/code2/688.txt
- create mode 100644 week2/code2/689.txt
- create mode 100644 week2/code2/69.txt
- create mode 100644 week2/code2/690.txt
- create mode 100644 week2/code2/691.txt
- create mode 100644 week2/code2/692.txt
- create mode 100644 week2/code2/693.txt
- create mode 100644 week2/code2/694.txt
- create mode 100644 week2/code2/695.txt
- create mode 100644 week2/code2/696.txt
- create mode 100644 week2/code2/697.txt
- create mode 100644 week2/code2/698.txt
- create mode 100644 week2/code2/699.txt
- create mode 100644 week2/code2/7.txt
- create mode 100644 week2/code2/70.txt
- create mode 100644 week2/code2/700.txt
- create mode 100644 week2/code2/701.txt
- create mode 100644 week2/code2/702.txt
- create mode 100644 week2/code2/703.txt
- create mode 100644 week2/code2/704.txt
- create mode 100644 week2/code2/705.txt
- create mode 100644 week2/code2/706.txt
- create mode 100644 week2/code2/707.txt
- create mode 100644 week2/code2/708.txt
- create mode 100644 week2/code2/709.txt
- create mode 100644 week2/code2/71.txt
- create mode 100644 week2/code2/710.txt
- create mode 100644 week2/code2/711.txt
- create mode 100644 week2/code2/712.txt
- create mode 100644 week2/code2/713.txt
- create mode 100644 week2/code2/714.txt
- create mode 100644 week2/code2/715.txt
- create mode 100644 week2/code2/716.txt
- create mode 100644 week2/code2/717.txt
- create mode 100644 week2/code2/718.txt
- create mode 100644 week2/code2/719.txt
- create mode 100644 week2/code2/72.txt
- create mode 100644 week2/code2/720.txt
- create mode 100644 week2/code2/721.txt
- create mode 100644 week2/code2/722.txt
- create mode 100644 week2/code2/723.txt
- create mode 100644 week2/code2/724.txt
- create mode 100644 week2/code2/725.txt
- create mode 100644 week2/code2/726.txt
- create mode 100644 week2/code2/727.txt
- create mode 100644 week2/code2/728.txt
- create mode 100644 week2/code2/729.txt
- create mode 100644 week2/code2/73.txt
- create mode 100644 week2/code2/730.txt
- create mode 100644 week2/code2/731.txt
- create mode 100644 week2/code2/732.txt
- create mode 100644 week2/code2/733.txt
- create mode 100644 week2/code2/734.txt
- create mode 100644 week2/code2/735.txt
- create mode 100644 week2/code2/736.txt
- create mode 100644 week2/code2/737.txt
- create mode 100644 week2/code2/738.txt
- create mode 100644 week2/code2/739.txt
- create mode 100644 week2/code2/74.txt
- create mode 100644 week2/code2/740.txt
- create mode 100644 week2/code2/741.txt
- create mode 100644 week2/code2/742.txt
- create mode 100644 week2/code2/743.txt
- create mode 100644 week2/code2/744.txt
- create mode 100644 week2/code2/745.txt
- create mode 100644 week2/code2/746.txt
- create mode 100644 week2/code2/747.txt
- create mode 100644 week2/code2/748.txt
- create mode 100644 week2/code2/749.txt
- create mode 100644 week2/code2/75.txt
- create mode 100644 week2/code2/750.txt
- create mode 100644 week2/code2/751.txt
- create mode 100644 week2/code2/752.txt
- create mode 100644 week2/code2/753.txt
- create mode 100644 week2/code2/754.txt
- create mode 100644 week2/code2/755.txt
- create mode 100644 week2/code2/756.txt
- create mode 100644 week2/code2/757.txt
- create mode 100644 week2/code2/758.txt
- create mode 100644 week2/code2/759.txt
- create mode 100644 week2/code2/76.txt
- create mode 100644 week2/code2/760.txt
- create mode 100644 week2/code2/761.txt
- create mode 100644 week2/code2/762.txt
- create mode 100644 week2/code2/763.txt
- create mode 100644 week2/code2/764.txt
- create mode 100644 week2/code2/765.txt
- create mode 100644 week2/code2/766.txt
- create mode 100644 week2/code2/767.txt
- create mode 100644 week2/code2/768.txt
- create mode 100644 week2/code2/769.txt
- create mode 100644 week2/code2/77.txt
- create mode 100644 week2/code2/770.txt
- create mode 100644 week2/code2/771.txt
- create mode 100644 week2/code2/772.txt
- create mode 100644 week2/code2/773.txt
- create mode 100644 week2/code2/774.txt
- create mode 100644 week2/code2/775.txt
- create mode 100644 week2/code2/776.txt
- create mode 100644 week2/code2/777.txt
- create mode 100644 week2/code2/778.txt
- create mode 100644 week2/code2/779.txt
- create mode 100644 week2/code2/78.txt
- create mode 100644 week2/code2/780.txt
- create mode 100644 week2/code2/781.txt
- create mode 100644 week2/code2/782.txt
- create mode 100644 week2/code2/783.txt
- create mode 100644 week2/code2/784.txt
- create mode 100644 week2/code2/785.txt
- create mode 100644 week2/code2/786.txt
- create mode 100644 week2/code2/787.txt
- create mode 100644 week2/code2/788.txt
- create mode 100644 week2/code2/789.txt
- create mode 100644 week2/code2/79.txt
- create mode 100644 week2/code2/790.txt
- create mode 100644 week2/code2/791.txt
- create mode 100644 week2/code2/792.txt
- create mode 100644 week2/code2/793.txt
- create mode 100644 week2/code2/794.txt
- create mode 100644 week2/code2/795.txt
- create mode 100644 week2/code2/796.txt
- create mode 100644 week2/code2/797.txt
- create mode 100644 week2/code2/798.txt
- create mode 100644 week2/code2/799.txt
- create mode 100644 week2/code2/8.txt
- create mode 100644 week2/code2/80.txt
- create mode 100644 week2/code2/800.txt
- create mode 100644 week2/code2/801.txt
- create mode 100644 week2/code2/802.txt
- create mode 100644 week2/code2/803.txt
- create mode 100644 week2/code2/804.txt
- create mode 100644 week2/code2/805.txt
- create mode 100644 week2/code2/806.txt
- create mode 100644 week2/code2/807.txt
- create mode 100644 week2/code2/808.txt
- create mode 100644 week2/code2/809.txt
- create mode 100644 week2/code2/81.txt
- create mode 100644 week2/code2/810.txt
- create mode 100644 week2/code2/811.txt
- create mode 100644 week2/code2/812.txt
- create mode 100644 week2/code2/813.txt
- create mode 100644 week2/code2/814.txt
- create mode 100644 week2/code2/815.txt
- create mode 100644 week2/code2/816.txt
- create mode 100644 week2/code2/817.txt
- create mode 100644 week2/code2/818.txt
- create mode 100644 week2/code2/819.txt
- create mode 100644 week2/code2/82.txt
- create mode 100644 week2/code2/820.txt
- create mode 100644 week2/code2/821.txt
- create mode 100644 week2/code2/822.txt
- create mode 100644 week2/code2/823.txt
- create mode 100644 week2/code2/824.txt
- create mode 100644 week2/code2/825.txt
- create mode 100644 week2/code2/826.txt
- create mode 100644 week2/code2/827.txt
- create mode 100644 week2/code2/828.txt
- create mode 100644 week2/code2/829.txt
- create mode 100644 week2/code2/83.txt
- create mode 100644 week2/code2/830.txt
- create mode 100644 week2/code2/831.txt
- create mode 100644 week2/code2/832.txt
- create mode 100644 week2/code2/833.txt
- create mode 100644 week2/code2/834.txt
- create mode 100644 week2/code2/835.txt
- create mode 100644 week2/code2/836.txt
- create mode 100644 week2/code2/837.txt
- create mode 100644 week2/code2/838.txt
- create mode 100644 week2/code2/839.txt
- create mode 100644 week2/code2/84.txt
- create mode 100644 week2/code2/840.txt
- create mode 100644 week2/code2/841.txt
- create mode 100644 week2/code2/842.txt
- create mode 100644 week2/code2/843.txt
- create mode 100644 week2/code2/844.txt
- create mode 100644 week2/code2/845.txt
- create mode 100644 week2/code2/846.txt
- create mode 100644 week2/code2/847.txt
- create mode 100644 week2/code2/848.txt
- create mode 100644 week2/code2/849.txt
- create mode 100644 week2/code2/85.txt
- create mode 100644 week2/code2/850.txt
- create mode 100644 week2/code2/851.txt
- create mode 100644 week2/code2/852.txt
- create mode 100644 week2/code2/853.txt
- create mode 100644 week2/code2/854.txt
- create mode 100644 week2/code2/855.txt
- create mode 100644 week2/code2/856.txt
- create mode 100644 week2/code2/857.txt
- create mode 100644 week2/code2/858.txt
- create mode 100644 week2/code2/859.txt
- create mode 100644 week2/code2/86.txt
- create mode 100644 week2/code2/860.txt
- create mode 100644 week2/code2/861.txt
- create mode 100644 week2/code2/862.txt
- create mode 100644 week2/code2/863.txt
- create mode 100644 week2/code2/864.txt
- create mode 100644 week2/code2/865.txt
- create mode 100644 week2/code2/866.txt
- create mode 100644 week2/code2/867.txt
- create mode 100644 week2/code2/868.txt
- create mode 100644 week2/code2/869.txt
- create mode 100644 week2/code2/87.txt
- create mode 100644 week2/code2/870.txt
- create mode 100644 week2/code2/871.txt
- create mode 100644 week2/code2/872.txt
- create mode 100644 week2/code2/873.txt
- create mode 100644 week2/code2/874.txt
- create mode 100644 week2/code2/875.txt
- create mode 100644 week2/code2/876.txt
- create mode 100644 week2/code2/877.txt
- create mode 100644 week2/code2/878.txt
- create mode 100644 week2/code2/879.txt
- create mode 100644 week2/code2/88.txt
- create mode 100644 week2/code2/880.txt
- create mode 100644 week2/code2/881.txt
- create mode 100644 week2/code2/882.txt
- create mode 100644 week2/code2/883.txt
- create mode 100644 week2/code2/884.txt
- create mode 100644 week2/code2/885.txt
- create mode 100644 week2/code2/886.txt
- create mode 100644 week2/code2/887.txt
- create mode 100644 week2/code2/888.txt
- create mode 100644 week2/code2/889.txt
- create mode 100644 week2/code2/89.txt
- create mode 100644 week2/code2/890.txt
- create mode 100644 week2/code2/891.txt
- create mode 100644 week2/code2/892.txt
- create mode 100644 week2/code2/893.txt
- create mode 100644 week2/code2/894.txt
- create mode 100644 week2/code2/895.txt
- create mode 100644 week2/code2/896.txt
- create mode 100644 week2/code2/897.txt
- create mode 100644 week2/code2/898.txt
- create mode 100644 week2/code2/899.txt
- create mode 100644 week2/code2/9.txt
- create mode 100644 week2/code2/90.txt
- create mode 100644 week2/code2/900.txt
- create mode 100644 week2/code2/901.txt
- create mode 100644 week2/code2/902.txt
- create mode 100644 week2/code2/903.txt
- create mode 100644 week2/code2/904.txt
- create mode 100644 week2/code2/905.txt
- create mode 100644 week2/code2/906.txt
- create mode 100644 week2/code2/907.txt
- create mode 100644 week2/code2/908.txt
- create mode 100644 week2/code2/909.txt
- create mode 100644 week2/code2/91.txt
- create mode 100644 week2/code2/910.txt
- create mode 100644 week2/code2/911.txt
- create mode 100644 week2/code2/912.txt
- create mode 100644 week2/code2/913.txt
- create mode 100644 week2/code2/914.txt
- create mode 100644 week2/code2/915.txt
- create mode 100644 week2/code2/916.txt
- create mode 100644 week2/code2/917.txt
- create mode 100644 week2/code2/918.txt
- create mode 100644 week2/code2/919.txt
- create mode 100644 week2/code2/92.txt
- create mode 100644 week2/code2/920.txt
- create mode 100644 week2/code2/921.txt
- create mode 100644 week2/code2/922.txt
- create mode 100644 week2/code2/923.txt
- create mode 100644 week2/code2/924.txt
- create mode 100644 week2/code2/925.txt
- create mode 100644 week2/code2/926.txt
- create mode 100644 week2/code2/927.txt
- create mode 100644 week2/code2/928.txt
- create mode 100644 week2/code2/929.txt
- create mode 100644 week2/code2/93.txt
- create mode 100644 week2/code2/930.txt
- create mode 100644 week2/code2/931.txt
- create mode 100644 week2/code2/932.txt
- create mode 100644 week2/code2/933.txt
- create mode 100644 week2/code2/934.txt
- create mode 100644 week2/code2/935.txt
- create mode 100644 week2/code2/936.txt
- create mode 100644 week2/code2/937.txt
- create mode 100644 week2/code2/938.txt
- create mode 100644 week2/code2/939.txt
- create mode 100644 week2/code2/94.txt
- create mode 100644 week2/code2/940.txt
- create mode 100644 week2/code2/941.txt
- create mode 100644 week2/code2/942.txt
- create mode 100644 week2/code2/943.txt
- create mode 100644 week2/code2/944.txt
- create mode 100644 week2/code2/945.txt
- create mode 100644 week2/code2/946.txt
- create mode 100644 week2/code2/947.txt
- create mode 100644 week2/code2/948.txt
- create mode 100644 week2/code2/949.txt
- create mode 100644 week2/code2/95.txt
- create mode 100644 week2/code2/950.txt
- create mode 100644 week2/code2/951.txt
- create mode 100644 week2/code2/952.txt
- create mode 100644 week2/code2/953.txt
- create mode 100644 week2/code2/954.txt
- create mode 100644 week2/code2/955.txt
- create mode 100644 week2/code2/956.txt
- create mode 100644 week2/code2/957.txt
- create mode 100644 week2/code2/958.txt
- create mode 100644 week2/code2/959.txt
- create mode 100644 week2/code2/96.txt
- create mode 100644 week2/code2/960.txt
- create mode 100644 week2/code2/961.txt
- create mode 100644 week2/code2/962.txt
- create mode 100644 week2/code2/963.txt
- create mode 100644 week2/code2/964.txt
- create mode 100644 week2/code2/965.txt
- create mode 100644 week2/code2/966.txt
- create mode 100644 week2/code2/967.txt
- create mode 100644 week2/code2/968.txt
- create mode 100644 week2/code2/969.txt
- create mode 100644 week2/code2/97.txt
- create mode 100644 week2/code2/970.txt
- create mode 100644 week2/code2/971.txt
- create mode 100644 week2/code2/972.txt
- create mode 100644 week2/code2/973.txt
- create mode 100644 week2/code2/974.txt
- create mode 100644 week2/code2/975.txt
- create mode 100644 week2/code2/976.txt
- create mode 100644 week2/code2/977.txt
- create mode 100644 week2/code2/978.txt
- create mode 100644 week2/code2/979.txt
- create mode 100644 week2/code2/98.txt
- create mode 100644 week2/code2/980.txt
- create mode 100644 week2/code2/981.txt
- create mode 100644 week2/code2/982.txt
- create mode 100644 week2/code2/983.txt
- create mode 100644 week2/code2/984.txt
- create mode 100644 week2/code2/985.txt
- create mode 100644 week2/code2/986.txt
- create mode 100644 week2/code2/987.txt
- create mode 100644 week2/code2/988.txt
- create mode 100644 week2/code2/989.txt
- create mode 100644 week2/code2/99.txt
- create mode 100644 week2/code2/990.txt
- create mode 100644 week2/code2/991.txt
- create mode 100644 week2/code2/992.txt
- create mode 100644 week2/code2/993.txt
- create mode 100644 week2/code2/994.txt
- create mode 100644 week2/code2/995.txt
- create mode 100644 week2/code2/996.txt
- create mode 100644 week2/code2/997.txt
- create mode 100644 week2/code2/998.txt
- create mode 100644 week2/code2/999.txt
- create mode 100644 week2/code2/path.bak
- create mode 100644 week2/code2/test.data
-derolol@ubuntu:~/learning$ git branch
-* master
-derolol@ubuntu:~/learning$ git push -u origin master
-The authenticity of host 'github.com (13.250.177.223)' can't be established.
-RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.
-Are you sure you want to continue connecting (yes/no)? yes
-Warning: Permanently added 'github.com,13.250.177.223' (RSA) to the list of known hosts.
-git@github.com: Permission denied (publickey).
-fatal: 无法读取远程仓库。
-
-请确认您有正确的访问权限并且仓库存在。
-derolol@ubuntu:~/learning$ ssh -T git@github.com
-Warning: Permanently added the RSA host key for IP address '52.74.223.119' to the list of known hosts.
-git@github.com: Permission denied (publickey).
-derolol@ubuntu:~/learning$ ssh-keygen -t rsa -C "derolol"
-Generating public/private rsa key pair.
-Enter file in which to save the key (/home/derolol/.ssh/id_rsa): 
-Enter passphrase (empty for no passphrase): 
-Enter same passphrase again: 
-Your identification has been saved in /home/derolol/.ssh/id_rsa.
-Your public key has been saved in /home/derolol/.ssh/id_rsa.pub.
-The key fingerprint is:
-SHA256:KAkasi1NGDWgsXBXmwPOWWtuaBCq89VY4VVr33AqQQc derolol
-The key's randomart image is:
-+---[RSA 2048]----+
-|=o= o.+ ..E..    |
-|oB * = * . o     |
-|B + + O   + . .  |
-|oB o O o . o =   |
-|* o B = S . o .  |
-| + o o     .     |
-|  .              |
-|                 |
-|                 |
-+----[SHA256]-----+
-derolol@ubuntu:~/learning$ cat /home/derolol/.ssh/id_rsa.pub
-ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCl69Id7tI3fGR6qsXIPPU7OiGyPV81U02NStjDJZ0Xknoxi9qyDz7Uy4swixkePmBTGEW/B15WAK890X3c3QmFGY6CxWRazCAfQIigQzZsC2oETwJ+/jSJaoLHeZjS4DYi0iruUkhqvoO6ICosNgnJ9QXcsqptNMHSYf29p2beHPf+llVnwhwXzMmr4Z94XMPO4l/1C30FydG6Xlq6m+aWBUNXT27/u/BIHeKNxBLl4Pckx5GxZhEJNRWBccPtXgvXV+zr9S7pe26c3K2v4N2cZM6rygEbnkG9gxXiiO6jXQpUU0F/hHAN9Jy41vg+0vhja09s3WeZBkqxRL9cQXrb derolol
-derolol@ubuntu:~/learning$ git push -u origin master
-To github.com:derolol/Linux-Learning.git
- ! [rejected]        master -> master (fetch first)
-error: 无法推送一些引用到 'git@github.com:derolol/Linux-Learning.git'
-提示：更新被拒绝，因为远程仓库包含您本地尚不存在的提交。这通常是因为另外
-提示：一个仓库已向该引用进行了推送。再次推送前，您可能需要先整合远程变更
-提示：（如 'git pull ...'）。
-提示：详见 'git push --help' 中的 'Note about fast-forwards' 小节。
-derolol@ubuntu:~/learning$ git pull --help
-derolol@ubuntu:~/learning$ git branch
-* master
-derolol@ubuntu:~/learning$ git branch -a
-* master
-derolol@ubuntu:~/learning$ git pull origin master:master
-Warning: Permanently added the RSA host key for IP address '13.229.188.59' to the list of known hosts.
-warning: 没有共同的提交
-remote: Enumerating objects: 3, done.
-remote: Counting objects: 100% (3/3), done.
-remote: Compressing objects: 100% (2/2), done.
-remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
-展开对象中: 100% (3/3), 完成.
-来自 github.com:derolol/Linux-Learning
- ! [已拒绝]          master     -> master  (非快进)
- * [新分支]          master     -> origin/master
-derolol@ubuntu:~/learning$ git branch -a
-* master
-  remotes/origin/master
-derolol@ubuntu:~/learning$ git status
-位于分支 master
-无文件要提交，干净的工作区
-derolol@ubuntu:~/learning$ git add .
-derolol@ubuntu:~/learning$ git commit -m "First Commit"
-位于分支 master
-无文件要提交，干净的工作区
-derolol@ubuntu:~/learning$ git push -u origin master
-To github.com:derolol/Linux-Learning.git
- ! [rejected]        master -> master (non-fast-forward)
-error: 无法推送一些引用到 'git@github.com:derolol/Linux-Learning.git'
-提示：更新被拒绝，因为您当前分支的最新提交落后于其对应的远程分支。
-提示：再次推送前，先与远程变更合并（如 'git pull ...'）。详见
-提示：'git push --help' 中的 'Note about fast-forwards' 小节。
-derolol@ubuntu:~/learning$ git branch
-* master
-derolol@ubuntu:~/learning$ git branch -a
-* master
-  remotes/origin/master
-derolol@ubuntu:~/learning$ git pull origin master:master
-来自 github.com:derolol/Linux-Learning
- ! [已拒绝]          master     -> master  (非快进)
-derolol@ubuntu:~/learning$ git pull --force origin master:master
-来自 github.com:derolol/Linux-Learning
- + 1014e96...5450180 master     -> master  (强制更新)
-warning: fetch 更新了当前的分支。快进您的工作区
-至提交 1014e96ca1364e5dd3d8dc2501ad79db81e82b95。
-已经是最新的。
-derolol@ubuntu:~/learning$ git push -u origin master
-分支 'master' 设置为跟踪来自 'origin' 的远程分支 'master'。
-Everything up-to-date
-derolol@ubuntu:~/learning$ git add .
-derolol@ubuntu:~/learning$ git commit -m "first commit"
-位于分支 master
-您的分支与上游分支 'origin/master' 一致。
-
-无文件要提交，干净的工作区
-derolol@ubuntu:~/learning$ 
-derolol@ubuntu:~/learning$ ls
-README.md  week1
-derolol@ubuntu:~/learning$ cd week1
-derolol@ubuntu:~/learning/week1$ ls
-derolol@ubuntu:~/learning/week1$ ls
-derolol@ubuntu:~/learning/week1$ git rm week1
-fatal: 路径规格 'week1' 未匹配任何文件
-derolol@ubuntu:~/learning/week1$ rm week1
-rm: 无法删除'week1': 没有那个文件或目录
-derolol@ubuntu:~/learning/week1$ cd ../
-derolol@ubuntu:~/learning$ ls
-README.md  week1
-derolol@ubuntu:~/learning$ rm week1
-rm: 无法删除'week1': 是一个目录
-derolol@ubuntu:~/learning$ rm -d week1
-derolol@ubuntu:~/learning$ ls
-README.md
-derolol@ubuntu:~/learning$ git checkout -b test
-切换到一个新分支 'test'
-derolol@ubuntu:~/learning$ git branch -a
-  master
-* test
-  remotes/origin/master
-derolol@ubuntu:~/learning$ ls
-README.md
-derolol@ubuntu:~/learning$ mkdir week0
-derolol@ubuntu:~/learning$ cd week0/
-derolol@ubuntu:~/learning/week0$ vi
-
-[已修改但尚未保存]
-/bin/bash: q: 未找到命令
-
-Shell 已返回127
-
-请按 ENTER 或其它命令继续
-[已修改但尚未保存]
-/bin/bash: q: 未找到命令
-
-Shell 已返回127
-
-请按 ENTER 或其它命令继续
-[已修改但尚未保存]
-/bin/bash: wq: 未找到命令
-
-Shell 已返回127
-
-请按 ENTER 或其它命令继续
-[已修改但尚未保存]
-/bin/bash: q: 未找到命令
-
-Shell 已返回127
-
-请按 ENTER 或其它命令继续
-derolol@ubuntu:~/learning/week0$ ls
-derolol@ubuntu:~/learning/week0$ vi code.c
-derolol@ubuntu:~/learning/week0$ ls
-code.c
-derolol@ubuntu:~/learning/week0$ cd ../
-derolol@ubuntu:~/learning$ git add .
-derolol@ubuntu:~/learning$ git commit -m "First Commit"
-[test 5769e0b] First Commit
- 1 file changed, 6 insertions(+)
- create mode 100644 week0/code.c
-derolol@ubuntu:~/learning$ git push origin master
-Everything up-to-date
-derolol@ubuntu:~/learning$ git branch -a
-  master
-* test
-  remotes/origin/master
-derolol@ubuntu:~/learning$ git checkout master
-切换到分支 'master'
-您的分支与上游分支 'origin/master' 一致。
-derolol@ubuntu:~/learning$ ls
-README.md
-derolol@ubuntu:~/learning$ git checkout test
-切换到分支 'test'
-derolol@ubuntu:~/learning$ ls
-README.md  week0
-derolol@ubuntu:~/learning$ git status
-位于分支 test
-无文件要提交，干净的工作区
-derolol@ubuntu:~/learning$ git add .
-derolol@ubuntu:~/learning$ git commit -m "First Commit"
-位于分支 test
-无文件要提交，干净的工作区
-derolol@ubuntu:~/learning$ git push master:test
-ssh: Could not resolve hostname master: Name or service not known
-fatal: 无法读取远程仓库。
-
-请确认您有正确的访问权限并且仓库存在。
-derolol@ubuntu:~/learning$ git push origin master
-Everything up-to-date
-derolol@ubuntu:~/learning$ git checkout master
-切换到分支 'master'
-您的分支与上游分支 'origin/master' 一致。
-derolol@ubuntu:~/learning$ get merge test
-
-Command 'get' not found, but there are 18 similar ones.
-
-derolol@ubuntu:~/learning$ git merge test
-更新 5450180..5769e0b
-Fast-forward
- week0/code.c | 6 ++++++
- 1 file changed, 6 insertions(+)
- create mode 100644 week0/code.c
-derolol@ubuntu:~/learning$ git push origin master
-对象计数中: 4, 完成.
-压缩对象中: 100% (3/3), 完成.
-写入对象中: 100% (4/4), 386 bytes | 128.00 KiB/s, 完成.
-Total 4 (delta 0), reused 0 (delta 0)
-To github.com:derolol/Linux-Learning.git
-   5450180..5769e0b  master -> master
-derolol@ubuntu:~/learning$ git branch -D test
-已删除分支 test（曾为 5769e0b）。
-derolol@ubuntu:~/learning$ git branch
-* master
-derolol@ubuntu:~/learning$ ls
-README.md  week0
-derolol@ubuntu:~/learning$ cd week0/
-derolol@ubuntu:~/learning/week0$ mk code
-mk：未找到命令
-derolol@ubuntu:~/learning/week0$ mkdir code
-derolol@ubuntu:~/learning/week0$ mv ./code.c ./code
-derolol@ubuntu:~/learning/week0$ ls
-code
-derolol@ubuntu:~/learning/week0$ ls ./code
-code.c
-derolol@ubuntu:~/learning/week0$ cd ..
-derolol@ubuntu:~/learning$ git add .
-derolol@ubuntu:~/learning$ get commit -m "New Directory Code"
-
-Command 'get' not found, but there are 18 similar ones.
-
-derolol@ubuntu:~/learning$ git commit -m "New Directory Code"
-[master 2d50f8b] New Directory Code
- 1 file changed, 0 insertions(+), 0 deletions(-)
- rename week0/{ => code}/code.c (100%)
-derolol@ubuntu:~/learning$ git push origin master
-对象计数中: 3, 完成.
-压缩对象中: 100% (2/2), 完成.
-写入对象中: 100% (3/3), 305 bytes | 152.00 KiB/s, 完成.
-Total 3 (delta 0), reused 0 (delta 0)
-To github.com:derolol/Linux-Learning.git
-   5769e0b..2d50f8b  master -> master
+    1  ls
+    2  cd /etc/apt
+    3  vim sources.list
+    4  sudo apt-get install vim
+    5  vim sources.list
+    6  vi sources.list
+    7  cd /etc/apt
+    8  sudo cp sources.list sources.list.bak
+    9  sudo vim sources.list
+   10  sudo apt-get update
+   11  ls
+   12  ./
+   13  sudo apt-get install -f
+   14  sudo apt-get install-f
+   15  sudo apt-get install -f
+   16  cd jetbrains
+   17  ls
+   18  sudo tar -jxvf jetbrains-toolbox-1.11.4269.tar.gz
+   19  ls
+   20  tar -zxvf toolbox.tar.gz
+   21  ls
+   22  cd jetbrains-toolbox-1.11.4269
+   23  ./jetbrains-toolbox-1.11.4269
+   24  ls
+   25  sudo apt-get update
+   26  ls
+   27  cd desktop
+   28  ls
+   29  cd desktop
+   30  ls
+   31  cd example.desktop
+   32  cd examples.desktop
+   33  cd .example.desktop
+   34  cd .examples.desktop
+   35  cd /examples.desktop
+   36  sudo passwd -u root
+   37  sudo passwd root
+   38  cd ./examples.desktop/
+   39  ls
+   40  pwd
+   41  cd examples.desktop
+   42  cd 桌面
+   43  pwd
+   44  mkdir test
+   45  pwd
+   46  ls
+   47  rm test
+   48  rmdir test
+   49  ls
+   50  cd ..
+   51  sudo -i
+   52  ls
+   53  cd ..
+   54  cd..
+   55  ls
+   56  cd /
+   57  ls
+   58  cd
+   59  nc 202.38.95.46 12009
+   60  nc 202.38.95.46 12009
+   61  python3
+   62  ls
+   63  py
+   64  Pycharm
+   65  cd Pycharm
+   66  PyCharm PycharmProjects/
+   67  pip install virtualenv
+   68  sudo pip install virtualenv
+   69  pip install virtualenv
+   70  sudo pip install virtualenv
+   71  pip install virtualenv
+   72  sudo apt install python-pip
+   73  pip install virtualenv
+   74  python3
+   75  python
+   76  django-admin startproject dol
+   77  python manage.py startapp content
+   78  cd ..
+   79  pip install django
+   80  pip3 install django
+   81  djangp
+   82  django
+   83  django-admin
+   84  vi hello.c
+   85  gcc
+   86  gcc -Wall -E hello.c
+   87  ls
+   88  gcc -c hello.c
+   89  gcc -o hello.c
+   90  gcc -o hello.o
+   91  gcc -o hello.s
+   92  gcc -o hello.o
+   93  gcc -E hello.c
+   94  gcc -S hello.i
+   95  gcc -E hello.c hello.i
+   96  gcc -E hello.c -o hello.i
+   97  gcc -S hello.i -o hello.s
+   98  gcc -c hello.s -o hello.o
+   99  gcc -o hello.o -o hello
+  100  gcc -o hello
+  101  gcc hello.o -o hello
+  102  hello
+  103  ./hello
+  104  gcc hello.c -o hello
+  105  ./hello
+  106  objdump
+  107  objdump -S hello
+  108  gcc -g -o hello.c
+  109  gcc -g hello.c -o hello
+  110  objdump -S hello
+  111  objdump -d hello
+  112  vi hello.c
+  113  gcc -g -c hello.c -o hello.o
+  114  objdump -S -d hello.o
+  115  vi test2.c
+  116  gcc
+  117  gcc -help
+  118  gcc -h
+  119  gcc -g test2.c -o test2.o
+  120  objdmp -d test2.o
+  121  objdump -d test2.o
+  122  objdump -S -d test2.o
+  123  gcc -g -c test2.c -o test2.o
+  124  objdump -S -d test2.o
+  125  objdump -d test2.o
+  126  objdump -S -d test2.o
+  127  gcc test2.c -o test2
+  128  test2
+  129  ./test2
+  130  objdump
+  131  objdump -g test2.o
+  132  gcc -c test2.c -o test2.o
+  133  objdump -d test2.o
+  134  objdump -S -d test2.o
+  135  gcc -g -c test2.c -o test1.o
+  136  objdump -S -d test1.o
+  137  gcc -e hello.c -o hello.i
+  138  gcc -E hello.c -o hello.i
+  139  gcc -S hello.i -o hello.s
+  140  gcc -c hello.s -o hello.o
+  141  gcc -O2 hello.o -o hello
+  142  ./hello
+  143  vi hello.c
+  144  objdump -S -d hello.c
+  145  objdump -S -d hello.o
+  146  gcc -d hello.c
+  147  gcc -d hello.o
+  148  gcc -d hello.s
+  149  objdump -d hello.c
+  150  objdump -d hello.o
+  151  gcc -g -c hello.c -o hello.o
+  152  objdump -d hello.o
+  153  objdump -S -d hello.o
+  154  vi test1.c
+  155  vi test2.c
+  156  gcc test1.c test2.c -o test
+  157  test
+  158  ./test
+  159  gcc -E test1.c test2.c -o test1.i test2.i
+  160  gcc -E test1.c -o test1.i
+  161  gcc -E test2.c -o test2.i
+  162  gcc -S test1.i -o test1.s
+  163  gcc -S test2.i -o test2.s
+  164  gcc -c test1.s -o test1.o
+  165  gcc -c test2.s -o test2.o
+  166  objdump -S -d test1.o
+  167  gcc -g test1.o
+  168  gcc -g -c test1.c -o test1.o
+  169  objdump -d test1.o
+  170  objdump -S -d test1.o
+  171  objdump -S -d test2.o
+  172  gcc -g -c test2.c -o test2.o
+  173  objdump -S -d test2.o
+  174  objdump -S -d test
+  175  cd
+  176  ls
+  177  rm hello.c 
+  178  rm test*
+  179  ls
+  180  ./examples.desktop
+  181  sudo apt-get install gedit
+  182  cd /
+  183  ls
+  184  cd home
+  185  cd ~
+  186  ls
+  187  cd skr
+  188  ls -l
+  189  cat /proc/version
+  190  ls
+  191  git --version
+  192  sudo apt install git
+  193  git --version
+  194  ls
+  195  cd learning/
+  196  ls
+  197  git init
+  198  ls
+  199  mkdir week0
+  200  mkdir week1
+  201  ls
+  202  vi config.xml
+  203  rm config.xml ./week0/config.xml
+  204  rm config.xml ./week0
+  205  mv config.xml ./week0
+  206  mv ./config.xml ./week0/config.xml
+  207  ls
+  208  vi config.xml
+  209  mv config.xml ./week0/
+  210  ls
+  211  ls ./week0
+  212  tar -zcvf test.tar.gz week0 week1 week2
+  213  git branch
+  214  git commit -m "first commit"
+  215  git remote add origin git@github.com:derolol/Linux-Learning.git
+  216  git commit -m "first commit"
+  217  git config --global user.email "837456540@qq.com"
+  218  git config --global user.name "derolol"
+  219  git commit -m "first commit"
+  220  git add .
+  221  git commit -m "first commit"
+  222  git branch
+  223  git push -u origin master
+  224  ssh -T git@github.com
+  225  ssh-keygen -t rsa -C "derolol"
+  226  cat /home/derolol/.ssh/id_rsa.pub
+  227  git push -u origin master
+  228  git pull --help
+  229  git branch
+  230  git branch -a
+  231  git pull origin master:master
+  232  git branch -a
+  233  git status
+  234  git add .
+  235  git commit -m "First Commit"
+  236  git push -u origin master
+  237  git branch
+  238  git branch -a
+  239  git pull origin master:master
+  240  git pull --force origin master:master
+  241  git push -u origin master
+  242  git add .
+  243  git commit -m "first commit"
+  244  ls
+  245  cd week1
+  246  ls
+  247  git rm week1
+  248  rm week1
+  249  cd ../
+  250  ls
+  251  rm week1
+  252  rm -d week1
+  253  ls
+  254  git checkout -b test
+  255  git branch -a
+  256  ls
+  257  mkdir week0
+  258  cd week0/
+  259  vi
+  260  ls
+  261  vi code.c
+  262  ls
+  263  cd ../
+  264  git add .
+  265  git commit -m "First Commit"
+  266  git push origin master
+  267  git branch -a
+  268  git checkout master
+  269  ls
+  270  git checkout test
+  271  ls
+  272  git status
+  273  git add .
+  274  git commit -m "First Commit"
+  275* 
+  276  git push origin master
+  277  git checkout master
+  278  get merge test
+  279  git merge test
+  280  git push origin master
+  281  git branch -D test
+  282  git branch
+  283  ls
+  284  cd week0/
+  285  mk code
+  286  mkdir code
+  287  mv ./code.c ./code
+  288  ls
+  289  ls ./code
+  290  cd ..
+  291  git add .
+  292  get commit -m "New Directory Code"
+  293  git commit -m "New Directory Code"
+  294  git push origin master
+  295  ls
+  296  cd week0/
+  297  mkdir note
+  298  cd note/
+  299  ls
+  300  vi note.txt
+  301  cd ..
+  302  cd ../
+  303  git add .
+  304  git commit -m "Submit Note"
+  305  git push origin master
