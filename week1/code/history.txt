@@ -1,0 +1,42 @@
+创建目录树
+  536  mkdir home
+  537  mkdir usr
+  538  ls
+  541  cd home
+  542  mkdir week1
+  543  cd week1/
+  545  mkdir code note
+  546  ls
+
+编写C源文件并运行
+  547  cd code
+  548  vim 1-1.c
+  550  gcc 1-1.c -o 1-1
+  551  ./1-1
+
+编写编译会出错的C源文件并将错误输出信息存储到文件error.dat中
+  552  vim 1-2.c
+  553  gcc 1-2.c -o 1-2
+  554  gcc 1-2.c -o 1-2 2>error.dat
+  555  ls
+  556  vi error.dat
+
+删除非空目录code
+  557  cd ..
+  558  rm code
+  559  rmdir code
+  560  rm -d code
+  561  rm -r code
+
+复制当前目录下的所有文件
+  563  cd note
+  564  vi note1.txt
+  565  vi note2.txt
+  566  ls
+  567  mkdir ../../week2
+  568  mkdir ../../week2/note
+  569  cp * ../../week2/note
+  570  cd ../../week2/note
+  571  ls
+  572  vim note1.txt 
+
