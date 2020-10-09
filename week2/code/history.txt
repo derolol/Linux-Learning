@@ -1,0 +1,296 @@
+  634  mkdir code
+  635  ls
+  636  cd c
+  637  cd code/
+  638  ls
+  639  vim ch2.h
+  640  vim 2-1.c
+  641  vim 2-2.c
+  642  vim 2-3.c
+  643  vim 2-5.c
+  656  vim 2-4.c
+  
+  657  cp ./2-4.c ./2-4-edit.c
+  658  vim 2-4-edit.c 
+  659  gcc 2-4-edit.c -o 2-4-edit
+  666  ./2-4-edit 
+  667  ls
+  668  rm *.txt
+  
+  670  gcc 2-1.c -o 2-1
+  671  gcc 2-2.c -o 2-2
+  672  gcc 2-3.c -o 2-3
+  673  gcc 2-4.c -o 2-4
+  674  gcc 2-5.c -o 2-5  
+
+去除1-2程序的调试信息
+derolol@ubuntu:~/learning/week2$ strip 1-2
+derolol@ubuntu:~/learning/week2$ gdb 1-2
+GNU gdb (Ubuntu 8.1-0ubuntu3) 8.1.0.20180409-git
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from 1-2...(no debugging symbols found)...done.
+(gdb) quit
+
+运行程序1-2
+derolol@ubuntu:~/learning/week2$ ./1-2
+Hello 1.
+Hello 2.
+Hello 3.
+Hello 4.
+Hello 5.
+Hello 6.
+Hello 7.
+Hello 8.
+Hello 9.
+Hello 10.
+Hello 11.
+Hello 12.
+Hello 13.
+Hello 14.
+Hello 15.
+Hello 16.
+Hello 17.
+Hello 18.
+Hello 19.
+Hello 20.
+Hello 21.
+Hello 22.
+Hello 23.
+Hello 24.
+Hello 25.
+Hello 26.
+Hello 27.
+Hello 28.
+Hello 29.
+Hello 30.
+Hello 31.
+Hello 32.
+Hello 33.
+Hello 34.
+Hello 35.
+Hello 36.
+Hello 37.
+Hello 38.
+Hello 39.
+Hello 40.
+Hello 41.
+Hello 42.
+Hello 43.
+Hello 44.
+Hello 45.
+Hello 46.
+Hello 47.
+Hello 48.
+Hello 49.
+Hello 50.
+Hello 51.
+Hello 52.
+Hello 53.
+Hello 54.
+Hello 55.
+Hello 56.
+Hello 57.
+Hello 58.
+Hello 59.
+Hello 60.
+Hello 61.
+Hello 62.
+Hello 63.
+Hello 64.
+Hello 65.
+Hello 66.
+Hello 67.
+Hello 68.
+Hello 69.
+Hello 70.
+Hello 71.
+Hello 72.
+Hello 73.
+Hello 74.
+Hello 75.
+Hello 76.
+Hello 77.
+Hello 78.
+Hello 79.
+Hello 80.
+Hello 81.
+Hello 82.
+Hello 83.
+Hello 84.
+Hello 85.
+Hello 86.
+Hello 87.
+Hello 88.
+Hello 89.
+Hello 90.
+Hello 91.
+Hello 92.
+Hello 93.
+Hello 94.
+Hello 95.
+Hello 96.
+Hello 97.
+Hello 98.
+Hello 99.
+Hello 100.
+
+重新编译源文件1-2.c并添加调试信息
+derolol@ubuntu:~/learning/week2$ gcc 1-2.c -o 1-2 -g
+derolol@ubuntu:~/learning/week2$ gdb 1-2
+GNU gdb (Ubuntu 8.1-0ubuntu3) 8.1.0.20180409-git
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from 1-2...done.
+(gdb) list
+1	#include <stdio.h>
+2	int main() {
+3		int i;
+4		for (i = 0; i < 100; i++) {
+5			printf("Hello %d.\n", i+1);
+6		}
+7		return 0;
+8	}
+(gdb) q
+
+编译环境变量，使得程序2-1可以不用附加路径直接运行
+先将环境变量备份，再对其进行编辑
+derolol@ubuntu:~/learning/week2/code2$ echo $PATH>path.bak
+derolol@ubuntu:~/learning/week2/code2$ ls
+2-1  2-1.c  2-1.h  path.bak
+derolol@ubuntu:~/learning/week2/code2$ pwd
+/home/derolol/learning/week2/code2
+derolol@ubuntu:~/learning/week2/code2$ PATH=$PATH:/home/derolol/learning/week2/code2
+derolol@ubuntu:~/learning/week2/code2$ echo $PATH
+/home/derolol/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/derolol/learning/week2/code2
+derolol@ubuntu:~/learning/week2/code2$ 2-1
+Hello World!
+
+还原初始环境变量
+derolol@ubuntu:~/learning/week2/code2$ PATH=/home/derolol/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+derolol@ubuntu:~/learning/week2/code2$ echo $PATH
+/home/derolol/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+
+跟踪程序2-2的运行
+derolol@ubuntu:~/learning/week2/code2$ vi 2-2.c
+derolol@ubuntu:~/learning/week2/code2$ gcc 2-2.c -o 2-2
+derolol@ubuntu:~/learning/week2/code2$ ./2-2
+Hello World!
+已终止
+derolol@ubuntu:~/learning/week2/code2$ strace ./2-2
+execve("./2-2", ["./2-2"], 0x7ffef8b773b0 /* 58 vars */) = 0
+brk(NULL)                               = 0x5649e5fd9000
+access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory)
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=78423, ...}) = 0
+mmap(NULL, 78423, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7feb5ba68000
+close(3)                                = 0
+access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\260\34\2\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=2030544, ...}) = 0
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7feb5ba66000
+mmap(NULL, 4131552, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7feb5b464000
+mprotect(0x7feb5b64b000, 2097152, PROT_NONE) = 0
+mmap(0x7feb5b84b000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1e7000) = 0x7feb5b84b000
+mmap(0x7feb5b851000, 15072, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7feb5b851000
+close(3)                                = 0
+arch_prctl(ARCH_SET_FS, 0x7feb5ba674c0) = 0
+mprotect(0x7feb5b84b000, 16384, PROT_READ) = 0
+mprotect(0x5649e47e0000, 4096, PROT_READ) = 0
+mprotect(0x7feb5ba7c000, 4096, PROT_READ) = 0
+munmap(0x7feb5ba68000, 78423)           = 0
+write(1, "Hello World!\n", 13Hello World!
+)          = 13
+nanosleep({tv_sec=200, tv_nsec=0}, {tv_sec=180, tv_nsec=338960351}) = ? ERESTART_RESTARTBLOCK (Interrupted by signal)
+--- SIGTERM {si_signo=SIGTERM, si_code=SI_USER, si_pid=2155, si_uid=1000} ---
++++ killed by SIGTERM +++
+已终止
+
+获取文件描述符，并根据文件描述符写数据到文件中
+可查询到该程序运行时多了一个文件描述符3，代表新建的文件
+derolol@ubuntu:~/learning/week2/code2$ cp 2-1.c 2-3.c
+derolol@ubuntu:~/learning/week2/code2$ vi 2-3.c
+derolol@ubuntu:~/learning/week2/code2$ gcc 2-3.c -o 2-3
+derolol@ubuntu:~/learning/week2/code2$ ./2-3
+New file description 3
+2318: 2-3 is running!
+Hello World!
+ret = 13PLease input data <= 100:
+123345567amdsfkndsjkfnwoebfkjdsfnjkds
+ret = 101
+
+更改文件权限    
+  210  vi 2-1.h
+  211  vi 2-1.c
+  212  gcc 2-1.c -o 2-1
+  215  chmod 744 2-1
+  
+查看系统打开文件数量的限制
+derolol@ubuntu:~/learning/week2/code2$ ulimit -a
+core file size          (blocks, -c) 0
+data seg size           (kbytes, -d) unlimited
+scheduling priority             (-e) 0
+file size               (blocks, -f) unlimited
+pending signals                 (-i) 15446
+max locked memory       (kbytes, -l) 16384
+max memory size         (kbytes, -m) unlimited
+open files                      (-n) 1024
+pipe size            (512 bytes, -p) 8
+POSIX message queues     (bytes, -q) 819200
+real-time priority              (-r) 0
+stack size              (kbytes, -s) 8192
+cpu time               (seconds, -t) unlimited
+max user processes              (-u) 15446
+virtual memory          (kbytes, -v) unlimited
+file locks                      (-x) unlimited
+derolol@ubuntu:~/learning/week2/code2$ gcc 2-4.c -o 2-4
+derolol@ubuntu:~/learning/week2/code2$ ./2-4
+已终止
+
+管道和后台运行
+derolol@ubuntu:~/learning/week2/code$ sleep 300 | sleep 400&
+[2] 5654
+derolol@ubuntu:~/learning/week2/code$ pgrep -l sleep
+5653 sleep
+5654 sleep
+derolol@ubuntu:~/learning/week2/code$ ll /proc/5653/fd
+总用量 0
+dr-x------ 2 derolol derolol  0 10月  8 21:22 ./
+dr-xr-xr-x 9 derolol derolol  0 10月  8 21:22 ../
+lrwx------ 1 derolol derolol 64 10月  8 21:22 0 -> /dev/pts/0
+l-wx------ 1 derolol derolol 64 10月  8 21:22 1 -> 'pipe:[143865]'
+lrwx------ 1 derolol derolol 64 10月  8 21:22 2 -> /dev/pts/0
+derolol@ubuntu:~/learning/week2/code$ ll /proc/5654/fd
+总用量 0
+dr-x------ 2 derolol derolol  0 10月  8 21:23 ./
+dr-xr-xr-x 9 derolol derolol  0 10月  8 21:22 ../
+lr-x------ 1 derolol derolol 64 10月  8 21:23 0 -> 'pipe:[143865]'
+lrwx------ 1 derolol derolol 64 10月  8 21:23 1 -> /dev/pts/0
+lrwx------ 1 derolol derolol 64 10月  8 21:23 2 -> /dev/pts/0
+derolol@ubuntu:~/learning/week2/code$ kill 5653
+derolol@ubuntu:~/learning/week2/code$ kill 5654
+[2]-  已终止               sleep 300 | sleep 400[2]-  已终止               sleep 300 | sleep 400
