@@ -1,5 +1,7 @@
 #include "ch2.h"
 
+/* buffer的大小为200，所以写文件的次数为200次 */
+
 int main() {
 	int ret;
 	char buffer[200];

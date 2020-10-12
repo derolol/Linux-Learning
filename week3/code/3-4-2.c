@@ -1,6 +1,6 @@
 #include "ch2.h"
 
-/* fwrite写多次所耗费的时间 */
+/* fwrite每次写多字节所耗费的时间 */
 
 int main() {
 	FILE* fin,* fout;
@@ -9,7 +9,7 @@ int main() {
 	if ((fin = fopen("./test1.txt", "r")) != NULL) {
 		if ((fout = fopen("./test4.txt", "w")) != NULL) {
 			fgets(buffer, sizeof(buffer), fin);
-			fwrite(buffer, 1, sizeof(buffer), fout);
+			fwrite(buffer, sizeof(buffer), 1, fout);
 			fclose(fout);
 		}
 		fclose(fin);

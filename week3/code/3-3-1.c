@@ -1,5 +1,7 @@
 #include "ch2.h"
 
+/* fwrite的返回值为其写文件的次数 即其第三个参数的值 */
+
 int main() {
 	int ret;
 	char buffer[200];

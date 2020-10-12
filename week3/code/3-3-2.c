@@ -1,5 +1,7 @@
 #include "ch2.h"
 
+/* fwrite每次写入的字节数为整个字符串的长度且只写一次，所以返回值为1 */
+
 int main() {
 	int ret;
 	char buffer[200];
