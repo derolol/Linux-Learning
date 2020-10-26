@@ -56,8 +56,11 @@ long readK(char* buffer, int size, FILE* fp, int no) {
 	for (i = 1; i < no + 1; i++) {
 		// 将文件指针定位到描述记录长度的字节前
 		fseek(fp, f_pointer, SEEK_SET);
+		
 		fread(buf, 4, 1, fp);
+		// sscanf(buf, "%ld", &n);
 		n = getLong(buf);
+		// fscanf(fp, "%ld", &n);
 
 		// 初始化记录结构体的信息
 		Record* r = (Record*)malloc(sizeof(Record));	
