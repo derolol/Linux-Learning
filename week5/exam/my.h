@@ -15,7 +15,7 @@
 }
 
 typedef struct user {
-	int id;
+	unsigned int id;
 	char name[8];
 	char htel[12];
 	char tel[12];

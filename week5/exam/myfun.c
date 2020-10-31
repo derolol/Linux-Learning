@@ -4,7 +4,10 @@ list *records = NULL;
 char *title[] = {"  userid", " name", "   htel", "    tel"};
 
 void release() {
-	if (!records) records = (list *) malloc(sizeof(list));
+	if (!records) {
+		records = (list *) malloc(sizeof(list));
+		records->r = NULL;
+	}
 	if (records->r) free(records->r);
 	records->size = 0;
 	records->r = NULL;
@@ -23,23 +26,40 @@ list* getRecords() {
 	fseek(fp, 0, SEEK_END);
         end = ftell(fp);
         records->size = (end + 1) / 43 - 1;
-        records->r = (record *) malloc(sizeof(record *) * records->size);
+        records->r = (record *) malloc(sizeof(record *) * (records->size));
 
         fseek(fp, 43, SEEK_SET);
         while(!feof(fp)) {
                 fscanf(fp,
-			"%d%s%s%s",
+			"%u%s%s%s",
 			&((records->r)[cur].id),
 			(records->r)[cur].name,
 			(records->r)[cur].htel,
 			(records->r)[cur].tel);
+		cur ++;
 	}
-
+	printf("4\n");
+	printf("%p\n", fp);
+	if (!fp) printf("NULL!\n");
+	fclose(fp);
+	printf("5\n");
 	return records;
 }
 
-int checkId() {
-
+int checkId(unsigned int id) {
+	int i;
+	printf("Get records!\n");
+	getRecords();
+	printf("start check!\n");
+	for(i = 0; i < records->size; i++) {
+		printf("checking...\n");
+		printf("no: %d, curID: %u\n", i, (records->r)[i].id);
+		if ((records->r)[i].id == id) {
+			printf("ID IS EXIST.\n");
+			return 0;
+		}
+	}
+	return 1;
 }
 
 void strResize(char *buf, char *str, size_t size) {
@@ -49,16 +69,32 @@ void strResize(char *buf, char *str, size_t size) {
         strncpy(str, buf, strSize);
 }
 
+void readIgnore(int number) {
+	char ch;
+	do {
+		ch = getc(stdin);
+		printf("[number:%d-%d]\n", number, ch);
+	} while((number&&(ch < '0' || ch > '9'))||(!number&&(ch != '\n')));
+	if (number) ungetc(ch, stdin);
+}
+
 record* input() {
+	unsigned int id;
+	char ch;
 	size_t *size = (size_t *) malloc(sizeof(size_t));
 	char **buf_ptr = (char **) malloc(sizeof(char*));
 	
 	record* r = (record*) malloc(sizeof(record));
 	memset(r, 0, sizeof(record));
 
-	fputs("Please input your id: ", stdout);
-	fscanf(stdin, "%d", &(r->id));
-	fgetc(stdin);
+	do {
+		fputs("Please input your id: ", stdout);
+		readIgnore(1);
+		fscanf(stdin, "%u", &id);
+		readIgnore(0);
+		printf("Finish once!\n");
+	} while(checkId(id));
+	r->id = id;
 	
 	*size = 0;
 	*buf_ptr = NULL;
@@ -95,7 +131,7 @@ void save(record* r) {
 			err_exit("Open file");
 	}
 	if ((fprintf(fp,
-		"\n%010d\t%-7s\t%11s\t%11s",
+		"\n%010u\t%-7s\t%11s\t%11s",
 		r->id, r->name, r->htel, r->tel)) == 0) {
 		err_exit("Write message");
 	}
@@ -113,15 +149,12 @@ int descname(const void *p1, const void *p2) {
 
 list* mysort() {
 	char ch;
-	FILE *fp;
 
 	fputs("Sorting data in ascending order (1) or in a descending order (0) ? ", stdout);
 	ch = fgetc(stdin);
 	while(fgetc(stdin) != '\n') ;
-
+	
 	if (getRecords()) {
-		output(records->r, records->size);
-		printf("List size: %d\n", records->size);
 		switch(ch) {
 			case '1':
 				qsort(records->r, records->size, sizeof(record), ascname);	
@@ -133,20 +166,17 @@ list* mysort() {
 				return NULL;
 		}
 	}
-
-	fclose(fp);
 	return records; 
 }
 
 void output(record* list, int size) {
 	int i;
-	printf("output size: %d\n", size);
 	fprintf(stdout,
-		"%-10s\t%-7s\t%-11s\t%-11s",
+		"%-10s\t%-7s\t%-11s\t%-11s\n",
 		title[0], title[1], title[2], title[3]
 	);
 	for(i = 0; i < size; i++) {
-                printf("%010d\t%-7s\t%11s\t%11s\n",
+                printf("%010u\t%-7s\t%11s\t%11s\n",
 			list[i].id,
 			list[i].name,
 			list[i].htel,

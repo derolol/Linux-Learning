@@ -1,9 +1,11 @@
 #include "my.h"
 
 int main() {
-	// record *r = input();
-	// save(r);
+	record *r = input();
+	save(r);
 	list *records = mysort();
-	output(records->r, records->size);
+	if (records)
+		output(records->r, records->size);
+	else printf("NULL");
 	return 0;
 }
