@@ -19,10 +19,16 @@ typedef struct user {
 	char name[8];
 	char htel[12];
 	char tel[12];
-} recorder;
+} record;
 
-recorder* input();
-void save(recorder* r);
-void mysort();
+typedef struct list {
+	int size;
+	record *r;
+} list;
+
+record* input();
+void save(record* r);
+list* mysort();
+void output(record *list, int size);
 
 #endif

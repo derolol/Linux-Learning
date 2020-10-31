@@ -1,8 +1,9 @@
 #include "my.h"
 
 int main() {
-	// recorder *r = input();
+	// record *r = input();
 	// save(r);
-	mysort();
+	list *records = mysort();
+	output(records->r, records->size);
 	return 0;
 }
