@@ -23,5 +23,6 @@ typedef struct user {
 
 recorder* input();
 void save(recorder* r);
+void mysort();
 
 #endif

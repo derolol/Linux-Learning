@@ -1,7 +1,8 @@
 #include "my.h"
 
 int main() {
-	recorder *r = input();
-	save(r);
+	// recorder *r = input();
+	// save(r);
+	mysort();
 	return 0;
 }
