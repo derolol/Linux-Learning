@@ -27,7 +27,8 @@ typedef struct list {
 } list;
 
 record* input();
-void save(record* r);
+int randdat(record *r);
+void save(record *r);
 list* mysort();
 void output(record *list, int size);
 
