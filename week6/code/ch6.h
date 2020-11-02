@@ -5,6 +5,8 @@
 #include <string.h>
 #include <fcntl.h>
 #include <stdlib.h>
+#include <time.h>
+#include <dlfcn.h>
 void err_exit(char* s) {
 	printf("USAGE : %s is failed.\n", s);
 	exit(1);
