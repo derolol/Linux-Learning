@@ -1,0 +1,5 @@
+child21 : pid = 67905 exit time = 2020-11-30 1:17:6.539097
+child2 : pid = 67904 exit time = 2020-11-30 1:17:6.539433
+child11 : pid = 67906 exit time = 2020-11-30 1:17:6.539747
+child1 : pid = 67903 exit time = 2020-11-30 1:17:6.540050
+father : pid = 67902 exit time = 2020-11-30 1:17:6.540418
